@@ -1,6 +1,6 @@
 {
-  "name": "@dashflowx/core",
-  "version": "1.1.17",
+  "name": "@dashflowx/ui",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -11,6 +11,10 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
+    },
+    "./styles.css": {
+      "import": "./dist/styles.css",
+      "require": "./dist/styles.css"
     }
   },
   "publishConfig": {
@@ -74,14 +78,16 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.18",
-    "@storybook/addon-essentials": "^8.0.0",
-    "@storybook/addon-interactions": "^8.0.0",
-    "@storybook/addon-links": "^8.0.0",
-    "@storybook/addon-onboarding": "^8.0.0",
-    "@storybook/blocks": "^8.0.0",
-    "@storybook/react": "^8.0.0",
-    "@storybook/react-vite": "^8.0.0",
-    "@storybook/test": "^8.0.0",
+    "@storybook/addon-essentials": "^8.1.10",
+    "@storybook/addon-interactions": "^8.1.10",
+    "@storybook/addon-links": "^8.1.10",
+    "@storybook/addon-onboarding": "^8.1.10",
+    "@storybook/blocks": "^8.1.10",
+    "@storybook/builder-vite": "^8.1.10",
+    "@storybook/react": "^8.1.10",
+    "@storybook/react-vite": "^8.1.10",
+    "@storybook/test": "^8.1.10",
+    "@types/node": "^20.14.5",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
@@ -101,7 +107,7 @@
     "mrm": "^4.1.22",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
-    "storybook": "^8.0.0",
+    "storybook": "^8.1.10",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
