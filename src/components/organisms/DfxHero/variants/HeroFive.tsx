@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 
 interface iDHeroOneProps {
-  heroImage?: JSX.Element;
   actions?: JSX.Element;
   heading: JSX.Element;
   caption: JSX.Element;
@@ -15,7 +14,6 @@ interface iDHeroOneProps {
 export const HeroFive = (
     (
       {
-        heroImage,
         className,
         actions,
         heading,
