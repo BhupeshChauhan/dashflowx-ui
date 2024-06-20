@@ -4,8 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../../atoms/accordion';
-import { AccordionOne } from './Varients/AccordionOne';
-import { AccordionComp } from './Varients/Basic';
+import { AccordionOne } from './variants/AccordionOne';
+import { AccordionComp } from './variants/Basic';
 
 interface iDfxAccordionItems {
   value: string;
@@ -27,7 +27,7 @@ interface iDfxAccordion {
     disabled?: boolean;
     dir?: 'ltr' | 'rtl';
     orientation?: 'horizontal' | 'vertical';
-    varient: 'basic' | 'one'
+    variant: 'basic' | 'one'
 }
 
 const DfxAccordion = ({
@@ -44,10 +44,10 @@ const DfxAccordion = ({
     disabled,
     dir,
     orientation,
-    varient
+    variant
 }: iDfxAccordion) => {
 
-  if (varient === 'basic') {
+  if (variant === 'basic') {
     return (
       <AccordionComp
         type={type}
@@ -66,7 +66,7 @@ const DfxAccordion = ({
       />
     );
   }
-  if(varient === 'one') {
+  if(variant === 'one') {
     return (
       <AccordionOne
         type={type}

@@ -13,7 +13,7 @@ interface iDfxFaq {
   description: string;
   accordionItems: Array<iAccordionCompItems>;
   className?: string;
-  accordionVarient: 'basic' | 'one';
+  accordionvariant: 'basic' | 'one';
   titleClassName?: string;
   descriptionClassName?: string;
   accordionContainerClassName?: string;
@@ -29,7 +29,7 @@ export const Basic = ({
   accordionItems,
   accordionContainerClassName,
   className,
-  accordionVarient,
+  accordionvariant,
 }: iDfxFaq) => {
   return (
     <section className={cn('bg-white dark:bg-gray-900', className)}>
@@ -52,7 +52,7 @@ export const Basic = ({
         </p>
       </div>
       <div className={cn('w-[60%] m-auto', accordionContainerClassName)}>
-        <DfxAccordion items={accordionItems} varient={accordionVarient} />
+        <DfxAccordion items={accordionItems} variant={accordionvariant} />
       </div>
     </section>
   );

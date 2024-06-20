@@ -1,4 +1,15 @@
-import { AlertDailogComp } from "./Varients/Basic";
+import { AlertDailogComp } from './variants/Basic';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/atoms/alert-dialog';
 
 interface iDfxAlertDialog {
   actionButton: string;
@@ -6,27 +17,40 @@ interface iDfxAlertDialog {
   description: string;
   onCancel: () => void;
   onSubmit: () => void;
-  varient: 'basic';
+  variant: 'basic';
 }
 
-export const DfxAlertDialog = ({
+const DfxAlertDialog = ({
   actionButton,
   title,
   description,
   onCancel,
   onSubmit,
-  varient
+  variant,
 }: iDfxAlertDialog) => {
-    if (varient === 'basic') {
-      return (
-        <AlertDailogComp
-          actionButton={actionButton}
-          title={title}
-          description={description}
-          onCancel={onCancel}
-          onSubmit={onSubmit}
-        />
-      );
-    }
-  return null
+  if (variant === 'basic') {
+    return (
+      <AlertDailogComp
+        actionButton={actionButton}
+        title={title}
+        description={description}
+        onCancel={onCancel}
+        onSubmit={onSubmit}
+      />
+    );
+  }
+  return null;
+};
+
+export {
+  DfxAlertDialog,
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
 };

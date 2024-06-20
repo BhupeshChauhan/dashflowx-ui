@@ -4,6 +4,7 @@ import { DfxAlertDialog } from '.';
 const meta: Meta<typeof DfxAlertDialog> = {
   title: 'molecules/DfxAlertDialog',
   component: DfxAlertDialog,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
@@ -18,7 +19,7 @@ export const Basic: Story = {
     actionButton: 'Open Dialog',
     title: 'Basic',
     description: 'This is a basic alert',
-    varient: 'basic'
+    variant: 'basic'
   }
 };
 

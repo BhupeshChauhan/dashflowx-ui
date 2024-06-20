@@ -1,4 +1,4 @@
-import { Basic } from './Varients/Basic';
+import { Basic } from './variants/Basic';
 
 interface iAccordionCompItems {
   value: string;
@@ -12,12 +12,12 @@ interface iDfxFaq {
   description: string;
   accordionItems: Array<iAccordionCompItems>;
   className?: string;
-  accordionVarient: 'basic' | 'one';
+  accordionvariant: 'basic' | 'one';
   titleClassName?: string;
   descriptionClassName?: string;
   accordionContainerClassName?: string;
   textContainerClassName?: string;
-  varient?: string;
+  variant?: string;
 }
 
 export const DfxFaq = ({
@@ -29,10 +29,10 @@ export const DfxFaq = ({
   accordionItems,
   accordionContainerClassName,
   className,
-  accordionVarient,
-  varient
+  accordionvariant,
+  variant
 }: iDfxFaq) => {
-  if (varient === 'basic') {
+  if (variant === 'basic') {
     return (
       <Basic
         textContainerClassName={textContainerClassName}
@@ -43,7 +43,7 @@ export const DfxFaq = ({
         description={description}
         descriptionClassName={descriptionClassName}
         accordionContainerClassName={accordionContainerClassName}
-        accordionVarient={accordionVarient}
+        accordionvariant={accordionvariant}
       />
     );
   }

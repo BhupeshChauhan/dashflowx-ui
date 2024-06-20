@@ -4,6 +4,7 @@ import { DfxFaq } from '.';
 const meta: Meta<typeof DfxFaq> = {
   title: 'organisms/DfxFaq',
   component: DfxFaq,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
@@ -37,7 +38,7 @@ export const Basic: Story = {
           "Yes. It's animated by default, but you can disable it if you prefer.",
       },
     ],
-    accordionVarient: 'one',
-    varient: 'basic',
+    accordionvariant: 'one',
+    variant: 'basic',
   },
 };

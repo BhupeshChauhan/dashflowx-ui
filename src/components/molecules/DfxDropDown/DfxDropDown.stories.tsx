@@ -4,6 +4,7 @@ import { DfxDropDown } from '.';
 const meta: Meta<typeof DfxDropDown> = {
   title: 'molecules/DfxDropDown',
   component: DfxDropDown,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

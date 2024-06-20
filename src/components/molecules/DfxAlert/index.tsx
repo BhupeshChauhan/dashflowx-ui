@@ -1,5 +1,5 @@
 import { Alert, AlertTitle, AlertDescription } from '../../atoms/alert';
-import { AlertComp } from './Varients/Basic';
+import { AlertComp } from './variants/Basic';
 
 interface iDfxAlert {
   prefix?: JSX.Element;
@@ -8,7 +8,7 @@ interface iDfxAlert {
   className?: string;
   titleClassName?: string;
   descriptionClassName?: string;
-  varient: 'basic';
+  variant: 'basic';
 }
 
 const DfxAlert = ({
@@ -18,9 +18,9 @@ const DfxAlert = ({
   className,
   titleClassName,
   descriptionClassName,
-  varient,
+  variant,
 }: iDfxAlert) => {
-  if (varient === 'basic')
+  if (variant === 'basic')
     return (
       <AlertComp
         className={className}

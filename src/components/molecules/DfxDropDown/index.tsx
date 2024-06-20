@@ -36,7 +36,7 @@ interface iDfxDropDown {
   dropdownItems: iDfxDropDownItems[];
 }
 
-export function DfxDropDown({ actionButton, dropdownItems }: iDfxDropDown) {
+function DfxDropDown({ actionButton, dropdownItems }: iDfxDropDown) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -96,3 +96,19 @@ export function DfxDropDown({ actionButton, dropdownItems }: iDfxDropDown) {
     </DropdownMenu>
   );
 }
+
+export {
+  DfxDropDown,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+};

@@ -4,6 +4,7 @@ import { DfxAccordion } from '.';
 const meta: Meta<typeof DfxAccordion> = {
   title: 'molecules/DfxAccordion',
   component: DfxAccordion,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
@@ -32,7 +33,7 @@ export const Basic: Story = {
         description: "Yes. It's animated by default, but you can disable it if you prefer.",
       },
     ],
-    varient: 'basic'
+    variant: 'basic'
   },
 };
 
@@ -55,6 +56,6 @@ export const One: Story = {
         description: "Yes. It's animated by default, but you can disable it if you prefer.",
       },
     ],
-    varient: 'one'
+    variant: 'one'
   },
 };
