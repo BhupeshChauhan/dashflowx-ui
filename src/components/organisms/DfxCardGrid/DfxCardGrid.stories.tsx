@@ -1,10 +1,10 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react';
-import { DfaxCardGrid } from '.';
+import { DfxCardGrid } from '.';
 
-const meta: Meta<typeof DfaxCardGrid> = {
-  title: 'organisms/DfaxCardGrid',
-  component: DfaxCardGrid,
+const meta: Meta<typeof DfxCardGrid> = {
+  title: 'organisms/DfxCardGrid',
+  component: DfxCardGrid,
   tags: ['autodocs'],
 };
 
