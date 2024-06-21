@@ -1,4 +1,3 @@
-import { create } from '@storybook/theming/create';
 import { mergeConfig } from "vite";
 
 const config = {
@@ -10,6 +9,7 @@ const config = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
   ],
+  staticDirs: ['../public'],
   framework: {
     name: "@storybook/react-vite",
     options: {},
