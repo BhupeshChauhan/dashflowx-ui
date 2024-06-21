@@ -45,6 +45,7 @@ export const LayoutTwo = ({
         profileImage={profileImage}
         profileName={profileName}
         profileDescription={profileDescription}
+        libraryType={libraryType}
       />
       <div className="max-h-screen w-full">
         <DfxNavBar

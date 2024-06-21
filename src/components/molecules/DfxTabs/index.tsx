@@ -7,7 +7,7 @@ import {
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
-export const DfxTabs = ({ tabsArray, buttonClassName, defaultActive }: any) => {
+const DfxTabs = ({ tabsArray, buttonClassName, defaultActive }: any) => {
   const [activeIndex, setActiveIndex] = useState(
     defaultActive ? defaultActive : 0
   );
@@ -36,9 +36,11 @@ export const DfxTabs = ({ tabsArray, buttonClassName, defaultActive }: any) => {
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsContent value="account" className='w-full mt-5'>
+      <TabsContent value="account" className="w-full mt-5">
         {tabsArray[activeIndex - 1]?.content}
       </TabsContent>
     </Tabs>
   );
 };
+
+export { DfxTabs, Tabs, TabsContent, TabsList, TabsTrigger };

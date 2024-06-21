@@ -13,6 +13,8 @@ interface iDfxSidebar {
   profileImage?: string;
   profileName?: string;
   profileDescription?: string;
+  profilePath?: string;
+  libraryType?: 'react' | 'next';
 }
 
 export const DfxSidebar = ({
@@ -25,6 +27,8 @@ export const DfxSidebar = ({
   profileImage,
   profileName,
   profileDescription,
+  profilePath,
+  libraryType
 }: iDfxSidebar) => {
   if (variant === 'basic') {
     return (
@@ -34,6 +38,7 @@ export const DfxSidebar = ({
         menuArrays={menuArrays}
         toggleExpand={toggleExpand}
         menuType={menuType}
+        libraryType={libraryType || 'react'}
       />
     );
   }
@@ -48,6 +53,8 @@ export const DfxSidebar = ({
         profileImage={profileImage}
         profileName={profileName}
         profileDescription={profileDescription}
+        profilePath={profilePath}
+        libraryType={libraryType || 'react'}
       />
     );
   }
@@ -62,6 +69,8 @@ export const DfxSidebar = ({
         profileImage={profileImage}
         profileName={profileName}
         profileDescription={profileDescription}
+        profilePath={profilePath}
+        libraryType={libraryType || 'react'}
       />
     );
   }

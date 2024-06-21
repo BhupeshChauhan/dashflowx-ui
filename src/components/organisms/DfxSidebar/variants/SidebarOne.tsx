@@ -13,7 +13,7 @@ interface iDfxSidebar {
   profileName?: string;
   profileDescription?: string;
   profilePath?: string;
-  libraryType?: 'react' | 'next';
+  libraryType: 'react' | 'next';
 }
 
 export const SidebarOne = ({
@@ -87,8 +87,8 @@ export const SidebarOne = ({
           showText={expanded}
           variant="basic"
           menuArrays={menuArrays}
-          library="react"
           type={menuType}
+          library={libraryType}
         />
         <div className="flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 border-t-2 border-gray-200">
           <button

@@ -12,6 +12,8 @@ interface iDfxSidebar {
   profileImage?: string;
   profileName?: string;
   profileDescription?: string;
+  profilePath?: string;
+  libraryType: 'react' | 'next';
 }
 
 export const SidebarTwo = ({
@@ -23,6 +25,8 @@ export const SidebarTwo = ({
   profileImage,
   profileName,
   profileDescription,
+  profilePath,
+  libraryType = 'react',
 }: iDfxSidebar) => {
   return (
     <aside
@@ -36,39 +40,37 @@ export const SidebarTwo = ({
       {logo}
       <Typography
         as={menuType}
-        className="flex gap-3 items-center mt-6 -mx-2"
+        className={cn(
+          expanded
+            ? "flex gap-3 items-center mt-6 -mx-2"
+            : "flex items-center justify-center"
+        )}
+        {...(libraryType === 'react' && {
+          to: { profilePath },
+        })}
+        {...(libraryType === 'next' && {
+          href: { profilePath },
+        })}
       >
         {profileImage && (
           <img
             className={cn(
               expanded
-                ? 'w-14 h-full aspect-square mx-2 rounded-full'
+                ? 'w-16 h-16 aspect-square mx-2 rounded-full'
                 : 'object-cover w-8 h-8 rounded-full'
             )}
             src={profileImage}
             alt="avatar"
           />
         )}
-        <div>
+        <div className={expanded ? 'block' : 'hidden'}>
           {profileName && (
-            <h4
-              className={cn(
-                expanded
-                  ? 'mx-2 font-medium text-gray-800 dark:text-gray-200'
-                  : 'hidden'
-              )}
-            >
+            <h4 className="mx-2 font-medium text-gray-800 dark:text-gray-200">
               {profileName}
             </h4>
           )}
           {profileDescription && (
-            <p
-              className={cn(
-                expanded
-                  ? 'mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'
-                  : 'hidden'
-              )}
-            >
+            <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">
               {profileDescription}
             </p>
           )}
@@ -79,8 +81,8 @@ export const SidebarTwo = ({
           showText={expanded}
           variant="basic"
           menuArrays={menuArrays}
-          library="react"
           type={menuType}
+          library={libraryType}
         />
         <div className="flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 border-t-2 border-gray-200">
           <button

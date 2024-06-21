@@ -36,6 +36,7 @@ export const LayoutComp = ({
           toggleExpand={toggleExpand}
           menuType={menuType}
           variant="basic"
+          libraryType={libraryType}
         />
         <div className="max-h-screen w-full">
           <DfxNavBar

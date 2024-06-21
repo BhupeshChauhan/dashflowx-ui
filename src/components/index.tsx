@@ -40,6 +40,13 @@ export {
   DropdownMenuTrigger,
 } from './molecules/DfxDropDown';
 export { DfxMenuList } from './molecules/DfxMenuList';
+export {
+  DfxTabs,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from './molecules/DfxTabs';
 export { DfxCardGrid } from './organisms/DfxCardGrid';
 export { DfxFaq } from './organisms/DfxFaq';
 export { DfxHero } from './organisms/DfxHero';
@@ -48,6 +55,7 @@ export { DfxPageHead } from './organisms/DfxPageHead';
 export { DfxSidebar } from './organisms/DfxSidebar';
 export { DfxStats } from './organisms/DfxStats';
 export { DfxAdminLayout } from './layout/DfxAdminLayout';
+export { DfxTabsLayout } from './layout/DfxTabsLayout';
 
 // export { DfxFooter } from './organisms/DfxFooter';
 

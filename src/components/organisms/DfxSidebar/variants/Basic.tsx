@@ -9,6 +9,7 @@ interface iDfxSidebar {
   toggleExpand: () => void;
   logo: JSX.Element;
   menuType: any
+  libraryType: 'react' | 'next';
 }
 
 export const SidebarComp = ({
@@ -16,7 +17,8 @@ export const SidebarComp = ({
   expanded,
   menuArrays,
   toggleExpand,
-  menuType
+  menuType,
+  libraryType
 }: iDfxSidebar) => {
   return (
     <aside
@@ -29,7 +31,7 @@ export const SidebarComp = ({
     >
       {logo}
       <div className="flex flex-col justify-between flex-1 mt-6">
-        <DfxMenuList showText={expanded} variant='basic' menuArrays={menuArrays} library="react" type={menuType} />
+        <DfxMenuList library={libraryType} showText={expanded} variant='basic' menuArrays={menuArrays} type={menuType} />
         <div className="flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 border-t-2 border-gray-200">
           <button
             onClick={toggleExpand}
