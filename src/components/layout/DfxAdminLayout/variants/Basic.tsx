@@ -1,6 +1,8 @@
+import { ScrollArea } from "@/components/atoms/scroll-area";
 import { iDfxMenu } from "@/components/molecules/DfxMenuList";
 import { DfxNavBar } from "@/components/organisms/DfxNavBar";
 import { DfxSidebar } from "@/components/organisms/DfxSidebar"
+import { cn } from "@/lib/utils";
 
 interface iLayoutComp {
   logo: JSX.Element;
@@ -11,6 +13,8 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions: JSX.Element;
   libraryType: "react" | "next";
+  navClassName?: string;
+  scrollAreaClassName?: string;
 }
 export const LayoutComp = ({
   logo,
@@ -21,6 +25,8 @@ export const LayoutComp = ({
   children,
   NavActions,
   libraryType,
+  navClassName,
+  scrollAreaClassName,
 }: iLayoutComp) => {
   return (
     <div className="flex h-screen w-screen bg-white">
@@ -37,10 +43,14 @@ export const LayoutComp = ({
             libraryType={libraryType}
             actions={NavActions}
             variant="basic"
+            navClassName={navClassName}
           />
-          <div className="w-full h-[calc(100vh-60px)] p-6 bg-slate-50">
+          <ScrollArea className={cn(
+            'w-full h-[calc(100vh-60px)] p-6 bg-slate-100',
+            scrollAreaClassName
+          )}>
             {children}
-          </div>
+          </ScrollArea>
         </div>
       </div>
   )
