@@ -13,9 +13,11 @@ interface iDfxMenuList {
   library: 'react' | 'next';
   type: any;
   className?: string;
+  showIcon?: boolean;
+  showText?: boolean;
 }
 
-export const MenuListComp = ({ menuArrays, library, type, className }: iDfxMenuList) => {
+export const MenuListComp = ({ showIcon, showText, menuArrays, library, type, className }: iDfxMenuList) => {
     if (library === 'react') {
         return (
           <nav className={cn(className)}>
@@ -27,9 +29,9 @@ export const MenuListComp = ({ menuArrays, library, type, className }: iDfxMenuL
                 as={type}
                 to={menu.path}
               >
-                {menu.menuIcon}
+                {showIcon && menu.menuIcon ? menu.menuIcon : <></>}
     
-                <span className={'mx-4 font-medium'}>{menu.title}</span>
+                {showText && <span className={'mx-4 font-medium'}>{menu.title}</span>}
               </Typography>
             ))}
           </nav>
@@ -46,9 +48,9 @@ export const MenuListComp = ({ menuArrays, library, type, className }: iDfxMenuL
                 as={type}
                 href={menu.path}
               >
-                {menu.menuIcon}
+                {showIcon && menu.menuIcon ? menu.menuIcon : <></>}
     
-                <span className={'mx-4 font-medium'}>{menu.title}</span>
+                {showText && <span className={'mx-4 font-medium'}>{menu.title}</span>}
               </Typography>
             ))}
           </nav>

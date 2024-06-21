@@ -14,6 +14,8 @@ interface iDfxMenuList {
   type: any;
   variant: 'basic' | 'one';
   className?: string;
+  showIcon?: boolean;
+  showText?: boolean;
 }
 
 export const DfxMenuList = ({
@@ -22,10 +24,12 @@ export const DfxMenuList = ({
   type,
   variant,
   className,
+  showIcon,
+  showText
 }: iDfxMenuList) => {
   if (variant === 'basic') {
     return (
-      <MenuListComp menuArrays={menuArrays} library={library} type={type} className={className} />
+      <MenuListComp showIcon={showIcon} showText={showText} menuArrays={menuArrays} library={library} type={type} className={className} />
     );
   }
   if (variant === 'one') {
