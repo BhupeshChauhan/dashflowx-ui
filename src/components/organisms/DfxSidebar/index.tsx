@@ -10,10 +10,7 @@ interface iDfxSidebar {
   logo: JSX.Element;
   variant: 'basic' | 'one' | 'two';
   menuType: any;
-  profileImage?: string;
-  profileName?: string;
-  profileDescription?: string;
-  profilePath?: string;
+  profileCard?: JSX.Element
   libraryType?: 'react' | 'next';
 }
 
@@ -24,10 +21,7 @@ export const DfxSidebar = ({
   toggleExpand,
   variant,
   menuType,
-  profileImage,
-  profileName,
-  profileDescription,
-  profilePath,
+  profileCard,
   libraryType
 }: iDfxSidebar) => {
   if (variant === 'basic') {
@@ -50,10 +44,7 @@ export const DfxSidebar = ({
         menuArrays={menuArrays}
         toggleExpand={toggleExpand}
         menuType={menuType}
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
-        profilePath={profilePath}
+        profileCard={profileCard}
         libraryType={libraryType || 'react'}
       />
     );
@@ -66,10 +57,7 @@ export const DfxSidebar = ({
         menuArrays={menuArrays}
         toggleExpand={toggleExpand}
         menuType={menuType}
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
-        profilePath={profilePath}
+        profileCard={profileCard}
         libraryType={libraryType || 'react'}
       />
     );

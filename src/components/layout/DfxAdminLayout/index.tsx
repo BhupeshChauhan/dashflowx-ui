@@ -13,9 +13,7 @@ interface iLayoutComp {
   NavActions: JSX.Element;
   libraryType: "react" | "next";
   variant: 'basic' | 'one' | 'two';
-  profileImage?: string;
-  profileName?: string;
-  profileDescription?: string;
+  profileCard?: JSX.Element;
 }
 
 export const DfxAdminLayout = ({
@@ -28,9 +26,7 @@ export const DfxAdminLayout = ({
   variant,
   menuType,
   children,
-  profileImage,
-  profileName,
-  profileDescription,
+  profileCard
 }: iLayoutComp) => {
   if (variant === 'basic') {
     return (
@@ -57,9 +53,7 @@ export const DfxAdminLayout = ({
         menuType={menuType}
         libraryType={libraryType}
         NavActions={NavActions}
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
+        profileCard={profileCard}
       >
         {children}
       </LayoutOne>
@@ -75,9 +69,7 @@ export const DfxAdminLayout = ({
         menuType={menuType}
         libraryType={libraryType}
         NavActions={NavActions}
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
+        profileCard={profileCard}
       >
         {children}
       </LayoutTwo>

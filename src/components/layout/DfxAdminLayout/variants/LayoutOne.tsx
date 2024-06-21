@@ -12,9 +12,7 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions: JSX.Element;
   libraryType: 'react' | 'next';
-  profileImage?: string;
-  profileName?: string;
-  profileDescription?: string;
+  profileCard?: JSX.Element
   navClassName?: string;
   scrollAreaClassName?: string;
 }
@@ -27,9 +25,7 @@ export const LayoutOne = ({
   children,
   NavActions,
   libraryType,
-  profileImage,
-  profileName,
-  profileDescription,
+  profileCard,
   navClassName,
   scrollAreaClassName,
 }: iLayoutComp) => {
@@ -42,9 +38,7 @@ export const LayoutOne = ({
         toggleExpand={toggleExpand}
         menuType={menuType}
         variant="one"
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
+        profileCard={profileCard}
         libraryType={libraryType}
       />
       <div className="max-h-screen w-full">
