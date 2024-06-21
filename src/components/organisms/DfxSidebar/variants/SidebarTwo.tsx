@@ -10,6 +10,7 @@ interface iDfxSidebar {
   menuType: any;
   profileCard?: JSX.Element;
   libraryType: 'react' | 'next';
+  footerActions?: JSX.Element;
 }
 
 export const SidebarTwo = ({
@@ -20,6 +21,7 @@ export const SidebarTwo = ({
   menuType,
   profileCard,
   libraryType = 'react',
+  footerActions
 }: iDfxSidebar) => {
   return (
     <aside
@@ -31,7 +33,7 @@ export const SidebarTwo = ({
       )}
     >
       {logo}
-      {profileCard}
+      {profileCard && profileCard}
       <div className="flex flex-col justify-between flex-1 mt-6">
         <DfxMenuList
           showText={expanded}
@@ -41,6 +43,7 @@ export const SidebarTwo = ({
           library={libraryType}
         />
         <div className="flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 border-t-2 border-gray-200">
+          {footerActions && footerActions}
           <button
             onClick={toggleExpand}
             className={cn(expanded ? 'rotate-180 duration-75' : 'duration-75')}

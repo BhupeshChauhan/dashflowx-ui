@@ -12,6 +12,7 @@ interface iDfxSidebar {
   menuType: any;
   profileCard?: JSX.Element
   libraryType?: 'react' | 'next';
+  footerActions?: JSX.Element;
 }
 
 export const DfxSidebar = ({
@@ -22,7 +23,8 @@ export const DfxSidebar = ({
   variant,
   menuType,
   profileCard,
-  libraryType
+  libraryType,
+  footerActions
 }: iDfxSidebar) => {
   if (variant === 'basic') {
     return (
@@ -59,6 +61,7 @@ export const DfxSidebar = ({
         menuType={menuType}
         profileCard={profileCard}
         libraryType={libraryType || 'react'}
+        footerActions={footerActions}
       />
     );
   }

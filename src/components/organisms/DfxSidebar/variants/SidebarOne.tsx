@@ -31,7 +31,7 @@ export const SidebarOne = ({
       )}
     >
       {logo}
-      {profileCard}
+      {profileCard && profileCard}
       <div className="flex flex-col justify-between flex-1 mt-6">
         <DfxMenuList
           showText={expanded}
