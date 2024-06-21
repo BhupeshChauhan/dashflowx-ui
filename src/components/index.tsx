@@ -47,6 +47,7 @@ export { DfxNavBar } from './organisms/DfxNavBar';
 export { DfxPageHead } from './organisms/DfxPageHead';
 export { DfxSidebar } from './organisms/DfxSidebar';
 export { DfxStats } from './organisms/DfxStats';
+export { DfxAdminLayout } from './layout/DfxAdminLayout';
 
 // export { DfxFooter } from './organisms/DfxFooter';
 
@@ -79,4 +80,3 @@ export { DfxStats } from './organisms/DfxStats';
 // export { DfxFaqItem } from './organisms/DfxFaqItem';
 
 // export { DfxFaqList } from './organisms/DfxFaqList';
-

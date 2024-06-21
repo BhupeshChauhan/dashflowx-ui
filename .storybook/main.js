@@ -1,3 +1,4 @@
+import { create } from '@storybook/theming/create';
 import { mergeConfig } from "vite";
 
 const config = {
