@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { DfxAdminLayout } from '.';
+import { ArrowRight } from 'lucide-react';
 
 const meta: Meta<typeof DfxAdminLayout> = {
   title: 'layout/DfxAdminLayout',
@@ -13,19 +14,22 @@ const itemsArray = [
     id: '1',
     title: 'Home',
     path: '/',
-    active: true
+    active: true,
+    menuIcon: (<ArrowRight />),
   },
   {
     id: '2',
     title: 'About',
     path: '/',
-    active: false
+    active: false,
+    menuIcon: (<ArrowRight />),
   },
   {
     id: '3',
     title: 'Services',
     path: '/',
-    active: false
+    active: false,
+    menuIcon: (<ArrowRight />),
   },
 ]
 

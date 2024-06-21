@@ -26,7 +26,7 @@ export const SidebarComp = ({
       className={cn(
         expanded
           ? 'flex flex-col w-96 h-screen px-8 py-4 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700'
-          : 'flex flex-col items-center w-20 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
+          : 'flex flex-col items-center w-20 px-2 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
       )}
     >
       {logo}
