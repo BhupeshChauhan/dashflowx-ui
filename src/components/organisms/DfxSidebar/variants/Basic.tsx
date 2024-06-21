@@ -21,7 +21,7 @@ export const SidebarComp = ({
   libraryType
 }: iDfxSidebar) => {
   return (
-    <aside
+    <div
       id="side-bar"
       className={cn(
         expanded
@@ -41,6 +41,6 @@ export const SidebarComp = ({
           </button>
         </div>
       </div>
-    </aside>
+    </div>
   );
 };

@@ -24,7 +24,7 @@ export const SidebarTwo = ({
   footerActions,
 }: iDfxSidebar) => {
   return (
-    <aside
+    <div
       id="side-bar"
       className={cn(
         expanded
@@ -52,6 +52,6 @@ export const SidebarTwo = ({
           </button>
         </div>
       </div>
-    </aside>
+    </div>
   );
 };
