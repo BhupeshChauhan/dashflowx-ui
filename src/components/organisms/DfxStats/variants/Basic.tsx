@@ -20,7 +20,7 @@ export const StatsComp = ({
   return (
     <div
       className={cn(
-        'flex items-center justify-center w-screen h-screen text-gray-800 p-10 bg-gray-200',
+        'flex items-center justify-center p-10',
         className
       )}
     >

@@ -38,7 +38,7 @@ export const SidebarTwo = ({
           <img
             className={cn(
               expanded
-                ? 'object-cover w-16 h-16 mx-2 rounded-full'
+                ? 'w-14 h-full aspect-square mx-2 rounded-full'
                 : 'object-cover w-8 h-8 rounded-full'
             )}
             src={profileImage}

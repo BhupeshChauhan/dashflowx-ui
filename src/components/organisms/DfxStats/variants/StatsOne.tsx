@@ -26,23 +26,16 @@ export const StatsOne = ({
     >
       <div
         className={cn(
-          'grid gap-3 p-4 bg-white shadow-md',
+          'grid gap-3 bg-white shadow-md',
           items.length === 2 && 'grid-cols-1 md:grid-cols-2',
           items.length === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-          items.length >= 4 && 'grid-cols-4 md:grid-cols-2 lg:grid-cols-4',
+          items.length >= 4 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
           itemContainerClassName
         )}
       >
         {items.map((item, index) => {
-          if (index === items.length - 1) {
-            return (
-              <div className={cn('text-center', itemClassName)}>
-                {item.content}
-              </div>
-            );
-          }
           return (
-            <div className={cn('text-center md:border-r', itemClassName)}>
+            <div className={cn('text-center', itemClassName)} key={index}>
               {item.content}
             </div>
           );

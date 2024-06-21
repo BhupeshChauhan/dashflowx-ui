@@ -1,6 +1,6 @@
 interface iDfxPageHead {
-    title: string;
-    description: string;
+    title: string | JSX.Element;
+    description: string | JSX.Element;
     actions: JSX.Element;
   variant: 'basic';
 }
