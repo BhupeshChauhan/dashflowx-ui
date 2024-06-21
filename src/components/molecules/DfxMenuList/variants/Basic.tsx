@@ -17,44 +17,38 @@ interface iDfxMenuList {
   showText?: boolean;
 }
 
-export const MenuListComp = ({ showIcon, showText, menuArrays, library, type, className }: iDfxMenuList) => {
-    if (library === 'react') {
+export const MenuListComp = ({
+  showIcon,
+  showText,
+  menuArrays,
+  library,
+  type,
+  className,
+}: iDfxMenuList) => {
+  return (
+    <nav className={cn(className)}>
+      {menuArrays.map((menu) => {
+        const { path, title, active, menuIcon } = menu;
         return (
-          <nav className={cn(className)}>
-            {menuArrays.map((menu) => (
-              <Typography
-                className={cn(
-                  'flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
-                  menu.active ? 'bg-primary/70 text-white' : ''
-                )}
-                as={type}
-                to={menu.path}
-              >
-                {showIcon && menu.menuIcon ? menu.menuIcon : <></>}
-    
-                {showText && <span className={'mx-4 font-medium'}>{menu.title}</span>}
-              </Typography>
-            ))}
-          </nav>
+          <Typography
+            className={cn(
+              'flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
+              active ? 'bg-primary text-white' : ''
+            )}
+            as={type}
+            {...(library === 'react' && {
+              to: { path },
+            })}
+            {...(library === 'next' && {
+              href: { path },
+            })}
+          >
+            {showIcon && menuIcon ? menuIcon : <></>}
+
+            {showText && <span className={'mx-4 font-medium'}>{title}</span>}
+          </Typography>
         );
-      }
-      if (library === 'next') {
-        return (
-          <nav>
-            {menuArrays.map((menu) => (
-              <Typography
-                className={cn(
-                  'flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
-                )}
-                as={type}
-                href={menu.path}
-              >
-                {showIcon && menu.menuIcon ? menu.menuIcon : <></>}
-    
-                {showText && <span className={'mx-4 font-medium'}>{menu.title}</span>}
-              </Typography>
-            ))}
-          </nav>
-        );
-      }
-}
+      })}
+    </nav>
+  );
+};

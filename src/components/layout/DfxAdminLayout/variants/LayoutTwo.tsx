@@ -1,4 +1,3 @@
-import { ScrollArea } from '@/components/atoms/scroll-area';
 import { iDfxMenu } from '@/components/molecules/DfxMenuList';
 import { DfxNavBar } from '@/components/organisms/DfxNavBar';
 import { DfxSidebar } from '@/components/organisms/DfxSidebar';
@@ -54,14 +53,12 @@ export const LayoutTwo = ({
           variant="basic"
           navClassName={navClassName}
         />
-        <ScrollArea
-          className={cn(
-            'w-full h-[calc(100vh-60px)] p-6 bg-slate-100',
+        <div className={cn(
+            'w-full p-6 bg-slate-100 overflow-y-scroll h-[calc(100vh-120px)]',
             scrollAreaClassName
-          )}
-        >
-          {children}
-        </ScrollArea>
+          )}>
+            {children}
+          </div>
       </div>
     </div>
   );
