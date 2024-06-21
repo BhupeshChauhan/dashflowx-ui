@@ -24,8 +24,8 @@ export const DfxMenuList = ({
   type,
   variant,
   className,
-  showIcon,
-  showText
+  showIcon = true,
+  showText = true
 }: iDfxMenuList) => {
   if (variant === 'basic') {
     return (
