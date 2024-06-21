@@ -30,6 +30,7 @@ export const MenuListComp = ({
       {menuArrays.map((menu) => {
         const { path, title, active, menuIcon } = menu;
         return (
+          <>
           <Typography
             className={cn(
               'flex items-center gap-3 px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
@@ -37,16 +38,17 @@ export const MenuListComp = ({
             )}
             as={type}
             {...(library === 'react' && {
-              to: { path },
+              to: path,
             })}
             {...(library === 'next' && {
-              href: { path },
+              href: path,
             })}
-          >
+            >
             {showIcon && menuIcon ? menuIcon : <></>}
 
             {showText && <span className={'mx-4 font-medium'}>{title}</span>}
           </Typography>
+            </>
         );
       })}
     </nav>

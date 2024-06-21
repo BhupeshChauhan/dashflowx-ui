@@ -39,10 +39,10 @@ export const MenuListOne = ({
             )}
             as={type}
             {...(library === 'react' && {
-              to: { path },
+              to: path,
             })}
             {...(library === 'next' && {
-              href: { path },
+              href: path,
             })}
           >
             {title}
