@@ -11,9 +11,12 @@ interface iLayoutComp {
   menuType: any;
   children: JSX.Element;
   NavActions: JSX.Element;
-  libraryType: "react" | "next";
+  libraryType: 'react' | 'next';
   variant: 'basic' | 'one' | 'two';
-  profileCard?: JSX.Element;
+  profileImage?: string;
+  profileName?: string;
+  profileDescription?: string;
+  profilePath?: string;
 }
 
 export const DfxAdminLayout = ({
@@ -26,7 +29,10 @@ export const DfxAdminLayout = ({
   variant,
   menuType,
   children,
-  profileCard
+  profileImage,
+  profileName,
+  profileDescription,
+  profilePath,
 }: iLayoutComp) => {
   if (variant === 'basic') {
     return (
@@ -53,7 +59,10 @@ export const DfxAdminLayout = ({
         menuType={menuType}
         libraryType={libraryType}
         NavActions={NavActions}
-        profileCard={profileCard}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
       >
         {children}
       </LayoutOne>
@@ -69,11 +78,14 @@ export const DfxAdminLayout = ({
         menuType={menuType}
         libraryType={libraryType}
         NavActions={NavActions}
-        profileCard={profileCard}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
       >
         {children}
       </LayoutTwo>
     );
   }
-  return null
+  return null;
 };

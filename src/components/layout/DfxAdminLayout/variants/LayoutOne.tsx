@@ -12,9 +12,12 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions: JSX.Element;
   libraryType: 'react' | 'next';
-  profileCard?: JSX.Element
+  profileImage?: string;
+  profileName?: string;
+  profileDescription?: string;
   navClassName?: string;
   scrollAreaClassName?: string;
+  profilePath?: string;
 }
 export const LayoutOne = ({
   logo,
@@ -25,9 +28,12 @@ export const LayoutOne = ({
   children,
   NavActions,
   libraryType,
-  profileCard,
+  profileImage,
+  profileName,
+  profileDescription,
   navClassName,
   scrollAreaClassName,
+  profilePath
 }: iLayoutComp) => {
   return (
     <div className="flex h-screen w-screen bg-white">
@@ -38,8 +44,10 @@ export const LayoutOne = ({
         toggleExpand={toggleExpand}
         menuType={menuType}
         variant="one"
-        profileCard={profileCard}
-        libraryType={libraryType}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
       />
       <div className="max-h-screen w-full">
         <DfxNavBar

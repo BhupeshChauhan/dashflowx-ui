@@ -1,3 +1,4 @@
+import { Typography } from '@/components/atoms/typography';
 import { DfxMenuList, iDfxMenu } from '@/components/molecules/DfxMenuList';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
@@ -8,7 +9,10 @@ interface iDfxSidebar {
   toggleExpand: () => void;
   logo: JSX.Element;
   menuType: any;
-  profileCard?: JSX.Element
+  profileImage?: string;
+  profileName?: string;
+  profileDescription?: string;
+  profilePath?: string;
   libraryType: 'react' | 'next';
 }
 
@@ -18,20 +22,66 @@ export const SidebarOne = ({
   menuArrays,
   toggleExpand,
   menuType,
-  profileCard,
+  profileImage,
+  profileName,
+  profileDescription,
+  profilePath,
   libraryType = 'react',
 }: iDfxSidebar) => {
   return (
-    <div
+    <aside
       id="side-bar"
       className={cn(
         expanded
           ? 'flex flex-col w-96 h-screen px-8 py-4 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700'
-          : 'flex flex-col items-center w-20 px-2 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
+          : 'flex flex-col items-center px-2 w-20 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
       )}
     >
       {logo}
-      {profileCard && profileCard}
+      <Typography
+        as={menuType}
+        {...(libraryType === 'react' && {
+          to: {profilePath}
+        })}
+        {...(libraryType === 'next' && {
+          href: {profilePath}
+        })}
+        className="flex flex-col items-center mt-6 -mx-2"
+      >
+        {profileImage && (
+          <img
+            className={cn(
+              expanded
+                ? 'object-cover w-24 h-full aspect-square mx-2 rounded-full'
+                : 'object-cover w-8 h-8 rounded-full'
+            )}
+            src={profileImage}
+            alt="avatar"
+          />
+        )}
+        {profileName && (
+          <h4
+            className={cn(
+              expanded
+                ? 'mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'
+                : 'hidden'
+            )}
+          >
+            {profileName}
+          </h4>
+        )}
+        {profileDescription && (
+          <p
+            className={cn(
+              expanded
+                ? 'mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'
+                : 'hidden'
+            )}
+          >
+            {profileDescription}
+          </p>
+        )}
+      </Typography>
       <div className="flex flex-col justify-between flex-1 mt-6">
         <DfxMenuList
           showText={expanded}
@@ -49,6 +99,6 @@ export const SidebarOne = ({
           </button>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };

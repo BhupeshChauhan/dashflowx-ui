@@ -13,7 +13,7 @@ const itemsArray = [
   {
     id: '1',
     title: 'Home',
-    path: '/Home',
+    path: '/',
     active: true,
     menuIcon: (<ArrowRight />),
   },
@@ -61,9 +61,11 @@ export const One: Story = {
     variant: 'one',
     menuType: 'a',
     children: <></>,
-    profileCard: (
-      <></>
-    )
+    profileImage:
+      'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    profileName: 'John Doe',
+    profileDescription: 'john@example.com',
+    profilePath: '/profile',
   },
 };
 
@@ -78,8 +80,10 @@ export const Two: Story = {
     variant: 'two',
     menuType: 'a',
     children: <></>,
-    profileCard: (
-      <></>
-    )
+    profileImage:
+      'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+    profileName: 'John Doe',
+    profileDescription: 'john@example.com',
+    profilePath: '/profile',
   },
 };
