@@ -12,10 +12,7 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./styles.css": {
-      "import": "./dist/styles.css",
-      "require": "./dist/styles.css"
-    }
+    "./style.css": "./dist/assets/style.css"
   },
   "publishConfig": {
     "access": "public"
@@ -29,6 +26,7 @@
     "commit": "yarn git-cz"
   },
   "dependencies": {
+    "@dashflowx/core": "^2.0.3",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
