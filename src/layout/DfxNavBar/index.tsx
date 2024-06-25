@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { iDfxMenu } from '../../molecules/DfxMenuList';
 import NavbarComp from './variants/Basic';
 import { NavbarOne } from './variants/NavbarOne';
 
+interface iDfxMenu {
+  id: string;
+  menuIcon?: JSX.Element;
+  title: string;
+  path: string;
+  active: boolean;
+}
 interface iDfxNavBarProps {
   logo?: JSX.Element;
   menuArrays?: iDfxMenu[];
