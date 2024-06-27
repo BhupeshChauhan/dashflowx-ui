@@ -3228,7 +3228,7 @@
     telejson "^7.2.0"
     tiny-invariant "^1.3.1"
 
-"@storybook/cli@8.1.10":
+"@storybook/cli@8.1.10", "@storybook/cli@^8.1.10":
   version "8.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-8.1.10.tgz#44460540692add5f1a8d7edefb7cd68c79f6b533"
   integrity sha512-7Fm2Qgk33sHayZ0QABqwe1Jto4yyVRVW6kTrSeP5IuLh+mn244RgxBvWtGCyL1EcWDFI7PYUFa0HxgTCq7C+OA==
