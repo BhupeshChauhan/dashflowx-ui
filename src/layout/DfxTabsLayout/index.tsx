@@ -26,6 +26,7 @@ export const DfxTabsLayout = ({
   caption,
   defaultActive,
   buttonClassName,
+  tabsClassName,
 }: iDfxTabsLayoutProps) => {
   return (
     <div className={cn('py-8 px-4 text-center lg:py-16 lg:px-12', className)}>
@@ -36,6 +37,7 @@ export const DfxTabsLayout = ({
         tabsArray={tabsArray}
         defaultActive={defaultActive}
         buttonClassName={buttonClassName}
+        className={tabsClassName}
       />
     </div>
   );
