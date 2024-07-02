@@ -3,6 +3,8 @@ import { CardComp, CardContent, Grid, TypographyComp } from '@dashflowx/core';
 interface iCardsArray {
   id: number;
   element: JSX.Element;
+  className?: string;
+  contentClassName?: string;
 }
 
 interface iGridProps {
@@ -42,8 +44,10 @@ export const DfxCardGrid = ({
       <Grid className={gridClassName}>
         {cardsArray.map((card) => (
           <div className="h-auto max-w-full rounded-lg" key={card.id}>
-            <CardComp className={cn('w-full', cardClassName)}>
-              <CardContent>{card.element}</CardContent>
+            <CardComp className={cn('w-full', card.className, cardClassName)}>
+              <CardContent className={cn(card.contentClassName)}>
+                {card.element}
+              </CardContent>
             </CardComp>
           </div>
         ))}
