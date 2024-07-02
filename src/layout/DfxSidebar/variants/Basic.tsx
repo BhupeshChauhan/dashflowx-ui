@@ -39,6 +39,7 @@ export const SidebarComp = ({
       {logo}
       <div className="flex flex-col justify-between flex-1 mt-6">
         <MenuList
+          showText={expanded}
           library={libraryType}
           variant="basic"
           menuArrays={menuArrays}
