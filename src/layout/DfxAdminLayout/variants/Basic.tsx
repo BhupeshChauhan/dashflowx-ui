@@ -21,6 +21,7 @@ interface iLayoutComp {
   libraryType: 'react' | 'next';
   navClassName?: string;
   scrollAreaClassName?: string;
+  prefixNavBar?: JSX.Element;
 }
 export const LayoutComp = ({
   logo,
@@ -33,6 +34,7 @@ export const LayoutComp = ({
   libraryType,
   navClassName,
   scrollAreaClassName,
+  prefixNavBar,
 }: iLayoutComp) => {
   return (
     <div className="flex h-screen w-screen bg-white">
@@ -47,6 +49,7 @@ export const LayoutComp = ({
       />
       <div className="max-h-screen w-full">
         <DfxNavBar
+          logo={prefixNavBar}
           libraryType={libraryType}
           actions={NavActions}
           variant="basic"

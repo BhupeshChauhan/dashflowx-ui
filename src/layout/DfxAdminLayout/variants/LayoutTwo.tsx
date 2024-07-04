@@ -23,6 +23,7 @@ interface iLayoutComp {
   navClassName?: string;
   scrollAreaClassName?: string;
   profilePath?: string;
+  prefixNavBar?: JSX.Element;
 }
 export const LayoutTwo = ({
   logo,
@@ -39,6 +40,7 @@ export const LayoutTwo = ({
   navClassName,
   scrollAreaClassName,
   profilePath,
+  prefixNavBar,
 }: iLayoutComp) => {
   return (
     <div className="flex h-screen w-screen bg-white">
@@ -61,6 +63,7 @@ export const LayoutTwo = ({
           actions={NavActions}
           variant="basic"
           navClassName={navClassName}
+          logo={prefixNavBar}
         />
         <div
           className={cn(

@@ -23,6 +23,7 @@ interface iLayoutComp {
   profileName?: string;
   profileDescription?: string;
   profilePath?: string;
+  prefixNavBar?: JSX.Element;
 }
 
 export const DfxAdminLayout = ({
@@ -39,6 +40,7 @@ export const DfxAdminLayout = ({
   profileName,
   profileDescription,
   profilePath,
+  prefixNavBar,
 }: iLayoutComp) => {
   if (variant === 'basic') {
     return (
@@ -50,6 +52,7 @@ export const DfxAdminLayout = ({
         menuType={menuType}
         libraryType={libraryType}
         NavActions={NavActions}
+        prefixNavBar={prefixNavBar}
       >
         {children}
       </LayoutComp>
@@ -69,6 +72,7 @@ export const DfxAdminLayout = ({
         profileName={profileName}
         profileDescription={profileDescription}
         profilePath={profilePath}
+        prefixNavBar={prefixNavBar}
       >
         {children}
       </LayoutOne>
@@ -88,6 +92,7 @@ export const DfxAdminLayout = ({
         profileName={profileName}
         profileDescription={profileDescription}
         profilePath={profilePath}
+        prefixNavBar={prefixNavBar}
       >
         {children}
       </LayoutTwo>
