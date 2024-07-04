@@ -91,7 +91,7 @@ export const SidebarOne = ({
       </TypographyComp>
       <div
         className={cn(
-          'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
+          'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full',
           expanded ? 'mt-[230px]' : 'mt-[130px]',
           expanded ? 'max-w-60' : 'max-w-14'
         )}
