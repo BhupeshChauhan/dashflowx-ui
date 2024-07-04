@@ -95,7 +95,12 @@ export const SidebarOne = ({
           expanded ? 'mt-[230px]' : 'mt-[130px]'
         )}
       >
-        <div className="absolute z-50 h-full w-full">
+        <div
+          className={cn(
+            'absolute z-50 h-full w-full',
+            expanded ? 'max-w-60' : 'max-w-20'
+          )}
+        >
           <MenuList
             showText={expanded}
             library={libraryType}

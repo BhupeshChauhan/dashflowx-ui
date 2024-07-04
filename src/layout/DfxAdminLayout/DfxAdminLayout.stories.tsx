@@ -1,7 +1,7 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { DfxAdminLayout } from '.';
 import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { DfxAdminLayout } from '.';
 
 const meta: Meta<typeof DfxAdminLayout> = {
   title: 'layout/DfxAdminLayout',
@@ -15,23 +15,23 @@ const itemsArray = [
     title: 'Home',
     path: '/',
     active: true,
-    menuIcon: (<ArrowRight />),
+    menuIcon: <ArrowRight />,
   },
   {
     id: '2',
     title: 'About',
     path: '/About',
     active: false,
-    menuIcon: (<ArrowRight />),
+    menuIcon: <ArrowRight />,
   },
   {
     id: '3',
     title: 'Services',
     path: '/Services',
     active: false,
-    menuIcon: (<ArrowRight />),
+    menuIcon: <ArrowRight />,
   },
-]
+];
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -60,7 +60,7 @@ export const One: Story = {
     toggleExpand: () => {},
     variant: 'one',
     menuType: 'a',
-    children: <></>,
+    children: <div className="h-full w-full bg-white"></div>,
     profileImage:
       'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     profileName: 'John Doe',
@@ -79,7 +79,7 @@ export const Two: Story = {
     toggleExpand: () => {},
     variant: 'two',
     menuType: 'a',
-    children: <></>,
+    children: <div className="h-full w-full bg-white"></div>,
     profileImage:
       'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     profileName: 'John Doe',

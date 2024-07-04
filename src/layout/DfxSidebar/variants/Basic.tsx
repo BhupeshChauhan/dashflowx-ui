@@ -37,8 +37,18 @@ export const SidebarComp = ({
       )}
     >
       {logo}
-      <div className="fixed top-4 z-50 flex flex-col items-start justify-between h-full flex-1 mt-16 w-full min-w-[500px]">
-        <div className="absolute z-50 h-full w-full">
+      <div
+        className={cn(
+          'fixed top-4 z-50 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
+          'mt-[80px]'
+        )}
+      >
+        <div
+          className={cn(
+            'absolute z-50 h-full w-full',
+            expanded ? 'max-w-60' : 'max-w-20'
+          )}
+        >
           <MenuList
             showText={expanded}
             library={libraryType}
