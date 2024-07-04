@@ -83,15 +83,17 @@ export const SidebarTwo = ({
           )}
         </div>
       </TypographyComp>
-      <div className="flex flex-col justify-between flex-1 mt-6">
+      <div className="flex flex-col justify-between flex-1 mt-6 w-full">
         <MenuList
           showText={expanded}
+          library={libraryType}
           variant="basic"
           menuArrays={menuArrays}
           type={menuType}
-          library={libraryType}
+          tooltipClassName="z-50"
+          className="absolute z-50"
         />
-        <div className="flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 border-t-2 border-gray-200">
+        <div className="absolute bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
           <button
             onClick={toggleExpand}
             className={cn(expanded ? 'rotate-180 duration-75' : 'duration-75')}
