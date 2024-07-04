@@ -40,7 +40,8 @@ export const SidebarComp = ({
       <div
         className={cn(
           'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
-          'mt-[80px]'
+          'mt-[80px]',
+          expanded ? 'max-w-60' : 'max-w-14'
         )}
       >
         <div
