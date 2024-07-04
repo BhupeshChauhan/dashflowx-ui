@@ -86,7 +86,8 @@ export const SidebarTwo = ({
       <div
         className={cn(
           'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
-          expanded ? 'mt-[150px]' : 'mt-[100px]'
+          expanded ? 'mt-[150px]' : 'mt-[100px]',
+          expanded ? 'max-w-60' : 'max-w-14'
         )}
       >
         <div
