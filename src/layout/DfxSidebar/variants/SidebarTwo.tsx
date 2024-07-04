@@ -41,7 +41,7 @@ export const SidebarTwo = ({
       className={cn(
         expanded
           ? 'flex flex-col w-96 h-screen px-8 py-4 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700'
-          : 'relative flex flex-col items-start z-50 w-20 px-2 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
+          : 'relative flex flex-col items-start w-20 px-2 h-screen py-4 overflow-y-auto bg-white border-r rtl:border-l rtl:border-r-0 dark:bg-gray-900 dark:border-gray-700'
       )}
     >
       {logo}
@@ -85,14 +85,14 @@ export const SidebarTwo = ({
       </TypographyComp>
       <div
         className={cn(
-          'fixed top-4 z-50 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
+          'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
           expanded ? 'mt-[150px]' : 'mt-[100px]'
         )}
       >
         <div
           className={cn(
-            'absolute z-50 h-full w-full',
-            expanded ? 'max-w-60' : 'max-w-20'
+            'absolute h-full w-full',
+            expanded ? 'max-w-60' : 'max-w-14'
           )}
         >
           <MenuList
@@ -106,7 +106,12 @@ export const SidebarTwo = ({
             tooltipClassName="bg-white"
           />
         </div>
-        <div className="absolute w-full bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+        <div
+          className={cn(
+            'fixed w-full mb-6 z-30 bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
+            expanded ? 'max-w-60' : 'max-w-16'
+          )}
+        >
           <button
             onClick={toggleExpand}
             className={cn(

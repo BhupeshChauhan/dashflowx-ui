@@ -39,14 +39,14 @@ export const SidebarComp = ({
       {logo}
       <div
         className={cn(
-          'fixed top-4 z-50 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
+          'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full min-w-[500px]',
           'mt-[80px]'
         )}
       >
         <div
           className={cn(
-            'absolute z-50 h-full w-full',
-            expanded ? 'max-w-60' : 'max-w-20'
+            'absolute h-full w-full',
+            expanded ? 'max-w-60' : 'max-w-14'
           )}
         >
           <MenuList
@@ -60,7 +60,12 @@ export const SidebarComp = ({
             tooltipClassName="bg-white"
           />
         </div>
-        <div className="absolute w-full bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700">
+        <div
+          className={cn(
+            'fixed w-full mb-6 z-30 bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
+            expanded ? 'max-w-60' : 'max-w-16'
+          )}
+        >
           <button
             onClick={toggleExpand}
             className={cn(
