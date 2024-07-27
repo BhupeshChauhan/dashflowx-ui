@@ -19,7 +19,7 @@ interface iDfxNavBarProps {
   variant?: 'basic' | 'one';
   libraryType?: 'react' | 'next';
   style?: any;
-  menuType?: string;
+  menuType?: any;
 }
 
 export const DfxNavBar: React.FC<iDfxNavBarProps> = ({

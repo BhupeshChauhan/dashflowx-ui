@@ -17,7 +17,7 @@ interface iDfxNavBarProps {
   navItemClassName?: string;
   libraryType?: 'react' | 'next';
   style?: any;
-  menuType?: string;
+  menuType?: any;
   hideMenuIcon?: boolean;
   handleMenutoggle?: () => void;
   openMenu?: boolean;

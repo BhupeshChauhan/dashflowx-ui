@@ -1018,10 +1018,10 @@
     "@types/conventional-commits-parser" "^5.0.0"
     chalk "^5.3.0"
 
-"@dashflowx/core@^2.0.22":
-  version "2.0.22"
-  resolved "https://registry.npmjs.org/@dashflowx/core/-/core-2.0.22.tgz"
-  integrity sha512-dZVYCJHmdTeIhg2e03UDql+to3JeuM9kOG469mX6Ix49EesgZtsVNY0PM9/TyOItT3ovxK5MChQu8zIdYCP7Pw==
+"@dashflowx/core@^2.0.23":
+  version "2.0.23"
+  resolved "https://registry.npmjs.org/@dashflowx/core/-/core-2.0.23.tgz"
+  integrity sha512-/vC2F9YtIqx0AD3VsoxuqpooXis7i704S1Tihr7wWiBugzKSfKO5Cy9YPNXMLykLd1M06257LbbpuhbkbQ+BtA==
   dependencies:
     "@radix-ui/react-accordion" "^1.2.0"
     "@radix-ui/react-alert-dialog" "^1.1.1"

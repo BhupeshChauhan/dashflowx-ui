@@ -63,6 +63,7 @@ export const One: Story = {
         </span>
       </a>
     ),
+    menuType: 'a',
     menuArrays: [
       {
         id: '1',
