@@ -14,6 +14,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   args: {
+    logo: (
+      <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src={'/DashflowLogo.png'} className="h-8" alt="Flowbite Logo" />
+      </a>
+    ),
     actions: (
       <>
         <button color="primary" className="mr-2 rounded-full">
@@ -57,10 +62,7 @@ export const One: Story = {
   args: {
     logo: (
       <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src={''} className="h-8" alt="Flowbite Logo" />
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-          Dashflow X
-        </span>
+        <img src={'/DashflowLogo.png'} className="h-8" alt="Flowbite Logo" />
       </a>
     ),
     menuType: 'a',
