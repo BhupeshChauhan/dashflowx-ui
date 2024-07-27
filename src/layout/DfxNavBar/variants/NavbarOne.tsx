@@ -43,8 +43,8 @@ export const NavbarOne = ({
       style={style}
     >
       <div className="max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <div>
-          {logo}
+      <div className='flex items-center justify-center'>
+          {logo && logo}
           {!hideMenuIcon ? (
             <Button
               data-collapse-toggle="navbar-default"

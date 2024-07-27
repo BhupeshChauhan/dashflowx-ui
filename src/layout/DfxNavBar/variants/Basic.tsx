@@ -40,7 +40,7 @@ const NavbarComp = ({
   return (
     <nav className={cn(navClassName)} style={style}>
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
-        <div>
+        <div className='flex items-center justify-center'>
           {logo && logo}
           {!hideMenuIcon ? (
             <Button

@@ -24,6 +24,32 @@ export const Basic: Story = {
       </>
     ),
     variant: 'basic',
+    menuArrays: [
+      {
+        id: "1",
+        title: "About Us",
+        path: "/about-us",
+        active: true,
+      },
+      {
+        id: "2",
+        title: "Pricing",
+        path: "/pricing",
+        active: false,
+      },
+      {
+        id: "3",
+        title: "Contact Us",
+        path: "/contact-us",
+        active: false,
+      },
+      {
+        id: "4",
+        title: "Blogs",
+        path: "/blogs",
+        active: false,
+      },
+    ]
   },
 };
 
