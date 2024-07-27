@@ -97,7 +97,7 @@ export const NavbarOne = ({
         <div
           className={cn(
             !hideMenuIcon ? 'hidden md:flex' : 'flex',
-            'flex-1 items-center justify-end'
+            'items-center justify-end'
           )}
         >
           <div>{actions}</div>
