@@ -53,10 +53,10 @@ export const SidebarTwo = ({
             : 'flex items-center justify-center'
         )}
         {...(libraryType === 'react' && {
-          to: { profilePath },
+          to: profilePath,
         })}
         {...(libraryType === 'next' && {
-          href: { profilePath },
+          href: profilePath,
         })}
       >
         {profileImage}
