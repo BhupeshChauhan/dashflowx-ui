@@ -19,7 +19,7 @@ interface iLayoutComp {
   NavActions: JSX.Element;
   libraryType: 'react' | 'next';
   variant: 'basic' | 'one' | 'two';
-  profileImage?: string;
+  profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
   profilePath?: string;

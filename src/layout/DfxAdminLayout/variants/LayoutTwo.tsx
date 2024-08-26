@@ -17,7 +17,7 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions: JSX.Element;
   libraryType: 'react' | 'next';
-  profileImage?: string;
+  profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
   navClassName?: string;

@@ -16,7 +16,7 @@ interface iDfxSidebar {
   toggleExpand: () => void;
   logo: JSX.Element;
   menuType: any;
-  profileImage?: string;
+  profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
   profilePath?: string;
@@ -55,17 +55,7 @@ export const SidebarOne = ({
         })}
         className="flex flex-col items-center mt-6 -mx-2"
       >
-        {profileImage && (
-          <img
-            className={cn(
-              expanded
-                ? 'object-cover w-24 h-full aspect-square mx-2 rounded-full'
-                : 'object-cover w-8 h-8 rounded-full'
-            )}
-            src={profileImage}
-            alt="avatar"
-          />
-        )}
+        {profileImage}
         {profileName && (
           <h4
             className={cn(

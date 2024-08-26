@@ -16,7 +16,7 @@ interface iDfxSidebar {
   logo: JSX.Element;
   variant: 'basic' | 'one' | 'two';
   menuType: any;
-  profileImage?: string;
+  profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
   profilePath?: string;
