@@ -35,7 +35,7 @@ export const SidebarThree = ({
   profileDescription,
   profilePath,
   libraryType = 'react',
-  sidebarFooter
+  sidebarFooter,
 }: iDfxSidebar) => {
   return (
     <aside
@@ -54,83 +54,86 @@ export const SidebarThree = ({
         )}
       >
         <div>
-        <div className='flex flex-col items-center w-full'>
-          {logo}
-          <TypographyComp
-            as={menuType}
-            {...(libraryType === 'react' && {
-              to: profilePath,
-            })}
-            {...(libraryType === 'next' && {
-              href: profilePath,
-            })}
-            className="flex flex-col items-center mt-6 -mx-2"
-          >
-            {profileImage}
-            {profileName && (
-              <h4
-                className={cn(
-                  expanded
-                    ? 'mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'
-                    : 'hidden'
-                )}
-              >
-                {profileName}
-              </h4>
-            )}
-            {profileDescription && (
-              <p
-                className={cn(
-                  expanded
-                    ? 'mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'
-                    : 'hidden'
-                )}
-              >
-                {profileDescription}
-              </p>
-            )}
-          </TypographyComp>
-        </div>
-        <div
-          className={cn(
-            'flex flex-col items-start justify-between flex-1 w-full',
-            expanded ? 'h-[70%]' : 'h-[70%]',
-          )}
-        >
+          <div className="flex flex-col items-center w-full">
+            {logo}
+            <TypographyComp
+              as={menuType}
+              {...(libraryType === 'react' && {
+                to: profilePath,
+              })}
+              {...(libraryType === 'next' && {
+                href: profilePath,
+              })}
+              className="flex flex-col items-center mt-6 -mx-2"
+            >
+              {profileImage}
+              {profileName && (
+                <h4
+                  className={cn(
+                    expanded
+                      ? 'mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'
+                      : 'hidden'
+                  )}
+                >
+                  {profileName}
+                </h4>
+              )}
+              {profileDescription && (
+                <p
+                  className={cn(
+                    expanded
+                      ? 'mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'
+                      : 'hidden'
+                  )}
+                >
+                  {profileDescription}
+                </p>
+              )}
+            </TypographyComp>
+          </div>
           <div
             className={cn(
-              'w-full',
-              expanded ? 'max-w-60' : 'max-w-14'
+              'flex flex-col items-start justify-between flex-1 w-full',
+              expanded ? 'h-[70%]' : 'h-[70%]'
             )}
           >
-            <MenuList
-              showText={expanded}
-              library={libraryType}
-              variant="basic"
-              menuArrays={menuArrays}
-              type={menuType}
-              linkClassName="w-full"
-              className="w-full"
-              tooltipClassName="bg-white"
-            />
+            <div className={cn('w-full', expanded ? 'max-w-60' : 'max-w-14')}>
+              <MenuList
+                showText={expanded}
+                library={libraryType}
+                variant="basic"
+                menuArrays={menuArrays}
+                type={menuType}
+                linkClassName="w-full"
+                className="w-full"
+                tooltipClassName="bg-white"
+              />
+            </div>
           </div>
         </div>
-        </div>
-        <div
-          className={cn(
-            'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
-          )}
-        >
-          {sidebarFooter}
-          <button
-            onClick={toggleExpand}
+        <div>
+          <div
             className={cn(
-              'flex items-center justify-center w-full',
-              expanded ? 'rotate-180 duration-75' : 'duration-75'
+              'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
             )}
           >
-            <ArrowRight className={cn('w-6 h-6')} />
-          </button>
+            {sidebarFooter}
+          </div>
+          <div
+            className={cn(
+              'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
+            )}
+          >
+            <button
+              onClick={toggleExpand}
+              className={cn(
+                'flex items-center justify-center w-full',
+                expanded ? 'rotate-180 duration-75' : 'duration-75'
+              )}
+            >
+              <ArrowRight className={cn('w-6 h-6')} />
+            </button>
+          </div>
         </div>
       </div>
     </aside>
