@@ -52,7 +52,7 @@ export const SidebarThree = ({
         )}
       >
         <div>
-        <div>
+        <div className='flex flex-col items-center w-full'>
           {logo}
           <TypographyComp
             as={menuType}

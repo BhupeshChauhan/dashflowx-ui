@@ -150,7 +150,7 @@ export const Three: Story = {
     toggleExpand: () => {},
     variant: 'three',
     menuType: 'a',
-    profileImage: (<></>),
+    profileImage: (<div className='bg-slate-200 w-12 h-12 rounded-full flex items-center justify-center'>i</div>),
     profileName: 'John Doe',
     profileDescription: 'john@example.com',
     profilePath: '/profile',
