@@ -19,7 +19,7 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions: JSX.Element;
   libraryType: 'react' | 'next';
-  variant: 'basic' | 'one' | 'two';
+  variant: 'basic' | 'one' | 'two' | 'three';
   profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
