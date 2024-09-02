@@ -40,15 +40,15 @@ export const SidebarThree = ({
       id="side-bar"
       className={cn(
         expanded
-          ? 'flex flex-col w-96 h-screen px-8 py-4 overflow-y-auto'
-          : 'relative flex flex-col items-start w-24 px-2 h-screen py-4 overflow-y-auto'
+          ? 'flex flex-col w-96 h-screen p-4 overflow-y-auto'
+          : 'relative flex flex-col items-start w-24 h-screen p-4 overflow-y-auto'
       )}
     >
       <div
         className={cn(
           expanded
-            ? 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-80 flex justify-between flex-col'
-            : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-16 flex justify-between items-center flex-col'
+            ? 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full flex justify-between flex-col'
+            : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full flex justify-between items-center flex-col'
         )}
       >
         <div>

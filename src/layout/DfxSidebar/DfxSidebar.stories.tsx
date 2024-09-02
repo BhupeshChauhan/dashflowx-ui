@@ -123,7 +123,7 @@ export const Two: Story = {
 export const Three: Story = {
   args: {
     logo: <ArrowRight />,
-    expanded: false,
+    expanded: true,
     menuArrays: [
       {
         id: '1',
