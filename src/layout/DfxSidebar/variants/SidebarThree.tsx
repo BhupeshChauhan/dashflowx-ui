@@ -21,6 +21,7 @@ interface iDfxSidebar {
   profileDescription?: string;
   profilePath?: string;
   libraryType: 'react' | 'next';
+  sidebarFooter?: JSX.Element;
 }
 
 export const SidebarThree = ({
@@ -34,6 +35,7 @@ export const SidebarThree = ({
   profileDescription,
   profilePath,
   libraryType = 'react',
+  sidebarFooter
 }: iDfxSidebar) => {
   return (
     <aside
@@ -116,9 +118,10 @@ export const SidebarThree = ({
         </div>
         <div
           className={cn(
-            'w-full mb-6 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
+            'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
           )}
         >
+          {sidebarFooter}
           <button
             onClick={toggleExpand}
             className={cn(

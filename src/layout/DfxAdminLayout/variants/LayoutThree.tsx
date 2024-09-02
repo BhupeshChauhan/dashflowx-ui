@@ -20,6 +20,7 @@ interface iLayoutComp {
   profileDescription?: string;
   scrollAreaClassName?: string;
   profilePath?: string;
+  sidebarFooter?: JSX.Element;
 }
 export const LayoutThree = ({
   logo,
@@ -34,6 +35,7 @@ export const LayoutThree = ({
   profileDescription,
   scrollAreaClassName,
   profilePath,
+  sidebarFooter
 }: iLayoutComp) => {
   return (
     <div className="flex h-screen w-screen">
@@ -49,6 +51,7 @@ export const LayoutThree = ({
         profileDescription={profileDescription}
         libraryType={libraryType}
         profilePath={profilePath}
+        sidebarFooter={sidebarFooter}
       />
       <div className="max-h-screen w-full">
         <div

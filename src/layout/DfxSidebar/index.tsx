@@ -22,6 +22,7 @@ interface iDfxSidebar {
   profileDescription?: string;
   profilePath?: string;
   libraryType?: 'react' | 'next';
+  sidebarFooter?: JSX.Element;
 }
 
 export const DfxSidebar = ({
@@ -36,6 +37,7 @@ export const DfxSidebar = ({
   profileDescription,
   profilePath,
   libraryType,
+  sidebarFooter
 }: iDfxSidebar) => {
   if (variant === 'basic') {
     return (
@@ -94,6 +96,7 @@ export const DfxSidebar = ({
         profileDescription={profileDescription}
         profilePath={profilePath}
         libraryType={libraryType || 'react'}
+        sidebarFooter={sidebarFooter}
       />
     );
   }
