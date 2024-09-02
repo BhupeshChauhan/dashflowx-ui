@@ -1,5 +1,6 @@
 import { LayoutComp } from './variants/Basic';
 import { LayoutOne } from './variants/LayoutOne';
+import { LayoutThree } from './variants/LayoutThree';
 import { LayoutTwo } from './variants/LayoutTwo';
 
 interface iDfxMenu {
@@ -96,6 +97,24 @@ export const DfxAdminLayout = ({
       >
         {children}
       </LayoutTwo>
+    );
+  }
+  if (variant === 'three') {
+    return (
+      <LayoutThree
+        logo={logo}
+        expanded={expanded}
+        menuArrays={menuArrays}
+        toggleExpand={toggleExpand}
+        menuType={menuType}
+        libraryType={libraryType}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
+      >
+        {children}
+      </LayoutThree>
     );
   }
   return null;
