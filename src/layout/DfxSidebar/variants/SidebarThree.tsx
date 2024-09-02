@@ -48,7 +48,7 @@ export const SidebarThree = ({
         className={cn(
           expanded
             ? 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-80 flex justify-between flex-col'
-            : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-16 flex justify-center'
+            : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-16 flex justify-between items-center flex-col'
         )}
       >
         <div>
@@ -97,7 +97,7 @@ export const SidebarThree = ({
         >
           <div
             className={cn(
-              'absolute w-full',
+              'w-full',
               expanded ? 'max-w-60' : 'max-w-14'
             )}
           >
@@ -117,7 +117,6 @@ export const SidebarThree = ({
         <div
           className={cn(
             'w-full mb-6 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
-            expanded ? 'max-w-60' : 'max-w-16'
           )}
         >
           <button
