@@ -17,7 +17,7 @@ interface iLayoutComp {
   toggleExpand: () => void;
   menuType: any;
   children: JSX.Element;
-  NavActions: JSX.Element;
+  NavActions?: JSX.Element;
   libraryType: 'react' | 'next';
   navClassName?: string;
   scrollAreaClassName?: string;
