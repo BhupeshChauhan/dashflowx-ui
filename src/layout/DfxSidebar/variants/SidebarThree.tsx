@@ -114,14 +114,14 @@ export const SidebarThree = ({
         <div>
           <div
             className={cn(
-              'w-full flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
+              'w-full flex flex-col items-center justify-center px-4 py-6 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
             )}
           >
             {sidebarFooter}
           </div>
           <div
             className={cn(
-              'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
+              'w-full mb-6 flex flex-col items-center justify-center px-4 py-4 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
             )}
           >
             <button
