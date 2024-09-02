@@ -36,7 +36,7 @@ export const LayoutThree = ({
   profilePath,
 }: iLayoutComp) => {
   return (
-    <div className="flex h-screen w-screen bg-white">
+    <div className="flex h-screen w-screen">
       <DfxSidebar
         logo={logo}
         expanded={expanded}
@@ -53,7 +53,7 @@ export const LayoutThree = ({
       <div className="max-h-screen w-full">
         <div
           className={cn(
-            'w-full p-6 bg-slate-100 overflow-y-scroll h-[calc(100vh)]',
+            'w-full p-6 overflow-y-scroll h-[calc(100vh)]',
             scrollAreaClassName
           )}
         >

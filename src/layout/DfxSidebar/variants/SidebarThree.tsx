@@ -47,8 +47,8 @@ export const SidebarThree = ({
       <div
         className={cn(
           expanded
-            ? 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full flex justify-between flex-col'
-            : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full flex justify-between items-center flex-col'
+            ? 'bg-white m-2 my-4 shadow-lg rounded-3xl h-full flex justify-between flex-col'
+            : 'bg-white m-2 my-4 shadow-lg rounded-3xl h-full flex justify-between items-center flex-col'
         )}
       >
         <div>
