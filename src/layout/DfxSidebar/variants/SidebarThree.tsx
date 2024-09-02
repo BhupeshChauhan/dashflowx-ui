@@ -54,7 +54,7 @@ export const SidebarThree = ({
         )}
       >
         <div>
-          <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center w-full mt-4">
             {logo}
             <TypographyComp
               as={menuType}
@@ -64,14 +64,14 @@ export const SidebarThree = ({
               {...(libraryType === 'next' && {
                 href: profilePath,
               })}
-              className="flex flex-col items-center mt-6 -mx-2"
+              className="flex flex-col items-center mt-2"
             >
               {profileImage}
               {profileName && (
                 <h4
                   className={cn(
                     expanded
-                      ? 'mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200'
+                      ? 'mx-2 mt-2 text-lg font-bold text-gray-800 dark:text-gray-200'
                       : 'hidden'
                   )}
                 >
@@ -82,7 +82,7 @@ export const SidebarThree = ({
                 <p
                   className={cn(
                     expanded
-                      ? 'mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400'
+                      ? 'mx-2 mt-1 text-xs font-medium text-gray-600 dark:text-gray-400'
                       : 'hidden'
                   )}
                 >
