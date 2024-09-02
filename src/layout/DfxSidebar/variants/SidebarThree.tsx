@@ -1,0 +1,125 @@
+import { cn } from '@/lib/utils';
+import { MenuList, TypographyComp } from '@dashflowx/core';
+import { ArrowRight } from 'lucide-react';
+
+interface iDfxMenu {
+  id: string;
+  menuIcon?: JSX.Element;
+  title: string;
+  path: string;
+  active: boolean;
+}
+
+interface iDfxSidebar {
+  expanded: boolean;
+  menuArrays: iDfxMenu[];
+  toggleExpand: () => void;
+  logo: JSX.Element;
+  menuType: any;
+  profileImage?: JSX.Element;
+  profileName?: string;
+  profileDescription?: string;
+  profilePath?: string;
+  libraryType: 'react' | 'next';
+}
+
+export const SidebarThree = ({
+  logo,
+  expanded,
+  menuArrays,
+  toggleExpand,
+  menuType,
+  profileImage,
+  profileName,
+  profileDescription,
+  profilePath,
+  libraryType = 'react',
+}: iDfxSidebar) => {
+  return (
+    <aside
+      id="side-bar"
+      className={cn(
+        expanded
+          ? 'flex flex-col w-96 h-screen px-8 py-4 overflow-y-auto'
+          : 'relative flex flex-col items-start w-24 px-2 h-screen py-4 overflow-y-auto'
+      )}
+    >
+      <div className={cn(
+        expanded
+          ? 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-80'
+          : 'bg-white m-2 my-4 shadow-2xl rounded-3xl h-full w-16'
+      )}>
+      {logo}
+      <TypographyComp
+        as={menuType}
+        className={cn(
+          expanded
+            ? 'flex gap-3 items-center mt-6 -mx-2'
+            : 'flex items-center justify-center'
+        )}
+        {...(libraryType === 'react' && {
+          to: profilePath,
+        })}
+        {...(libraryType === 'next' && {
+          href: profilePath,
+        })}
+      >
+        {profileImage}
+        <div className={expanded ? 'block' : 'hidden'}>
+          {profileName && (
+            <h4 className="mx-2 font-medium text-gray-800 dark:text-gray-200">
+              {profileName}
+            </h4>
+          )}
+          {profileDescription && (
+            <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">
+              {profileDescription}
+            </p>
+          )}
+        </div>
+      </TypographyComp>
+      <div
+        className={cn(
+          'fixed top-4 flex flex-col items-start justify-between h-full flex-1 w-full',
+          expanded ? 'mt-[150px]' : 'mt-[100px]',
+          expanded ? 'max-w-60' : 'max-w-14'
+        )}
+      >
+        <div
+          className={cn(
+            'absolute h-full w-full',
+            expanded ? 'max-w-60' : 'max-w-14'
+          )}
+        >
+          <MenuList
+            showText={expanded}
+            library={libraryType}
+            variant="basic"
+            menuArrays={menuArrays}
+            type={menuType}
+            linkClassName="w-full"
+            className="w-full"
+            tooltipClassName="bg-white"
+          />
+        </div>
+        <div
+          className={cn(
+            'fixed w-full mb-6 z-30 bottom-0 flex items-center justify-center px-4 py-4 mt-5 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700',
+            expanded ? 'max-w-60' : 'max-w-16'
+          )}
+        >
+          <button
+            onClick={toggleExpand}
+            className={cn(
+              'flex items-center justify-center w-full',
+              expanded ? 'rotate-180 duration-75' : 'duration-75'
+            )}
+          >
+            <ArrowRight className={cn('w-6 h-6')} />
+          </button>
+        </div>
+      </div>
+      </div>
+    </aside>
+  );
+};

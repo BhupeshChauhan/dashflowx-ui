@@ -1,5 +1,6 @@
 import { SidebarComp } from './variants/Basic';
 import { SidebarOne } from './variants/SidebarOne';
+import { SidebarThree } from './variants/SidebarThree';
 import { SidebarTwo } from './variants/SidebarTwo';
 
 interface iDfxMenu {
@@ -14,7 +15,7 @@ interface iDfxSidebar {
   menuArrays: iDfxMenu[];
   toggleExpand: () => void;
   logo: JSX.Element;
-  variant: 'basic' | 'one' | 'two';
+  variant: 'basic' | 'one' | 'two' | 'three';
   menuType: any;
   profileImage?: JSX.Element;
   profileName?: string;
@@ -80,5 +81,22 @@ export const DfxSidebar = ({
       />
     );
   }
+  if (variant === 'three') {
+    return (
+      <SidebarThree
+        logo={logo}
+        expanded={expanded}
+        menuArrays={menuArrays}
+        toggleExpand={toggleExpand}
+        menuType={menuType}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
+        libraryType={libraryType || 'react'}
+      />
+    );
+  }
+  
   return null;
 };

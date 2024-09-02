@@ -119,3 +119,40 @@ export const Two: Story = {
     profilePath: '/profile',
   },
 };
+
+export const Three: Story = {
+  args: {
+    logo: <ArrowRight />,
+    expanded: true,
+    menuArrays: [
+      {
+        id: '1',
+        title: 'Dashboard',
+        path: '/admin',
+        active: true,
+        menuIcon: <ArrowRight />,
+      },
+      {
+        id: '2',
+        title: 'Applicants',
+        path: '/admin/posts',
+        active: false,
+        menuIcon: <ArrowRight />,
+      },
+      {
+        id: '3',
+        title: 'Clients',
+        path: '/admin/posts',
+        active: false,
+        menuIcon: <ArrowRight />,
+      },
+    ],
+    toggleExpand: () => {},
+    variant: 'three',
+    menuType: 'a',
+    profileImage: (<></>),
+    profileName: 'John Doe',
+    profileDescription: 'john@example.com',
+    profilePath: '/profile',
+  },
+};
