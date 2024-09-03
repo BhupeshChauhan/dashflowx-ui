@@ -6,8 +6,8 @@ interface iDfxPageHead {
     actions: JSX.Element;
   variant: 'basic';
   titleClassName: string;
-  descriptionClassName: string;
-  actionClassName: string;
+  descriptionClassName?: string;
+  actionClassName?: string;
   className?: string; // for overriding default styles
   containerClassName?: string; // for overriding default styles
 }
