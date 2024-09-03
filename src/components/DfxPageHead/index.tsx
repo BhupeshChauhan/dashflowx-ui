@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 
 interface iDfxPageHead {
     title: string | JSX.Element;
-    description: string | JSX.Element;
-    actions: JSX.Element;
+    description?: string | JSX.Element;
+    actions?: JSX.Element;
   variant: 'basic';
-  titleClassName: string;
+  titleClassName?: string;
   descriptionClassName?: string;
   actionClassName?: string;
   className?: string; // for overriding default styles
