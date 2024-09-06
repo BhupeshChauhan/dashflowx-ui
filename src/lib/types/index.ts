@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export type PropsOf<
   C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<unknown>,
@@ -42,7 +42,7 @@ export type PolymorphicComponentProps<
 > = InheritableElementProps<C, Props & AsProp<C>>;
 
 export type PolymorphicRef<C extends React.ElementType> =
-  React.ComponentPropsWithRef<C>["ref"];
+  React.ComponentPropsWithRef<C>['ref'];
 
 export type PolymorphicComponentPropsWithRef<
   C extends React.ElementType,

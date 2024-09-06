@@ -76,7 +76,7 @@ export const One: Story = {
     toggleExpand: () => {},
     variant: 'one',
     menuType: 'a',
-    profileImage: (<></>),
+    profileImage: <></>,
     profileName: 'John Doe',
     profileDescription: 'john@example.com',
     profilePath: '/profile',
@@ -113,7 +113,7 @@ export const Two: Story = {
     toggleExpand: () => {},
     variant: 'two',
     menuType: 'a',
-    profileImage: (<></>),
+    profileImage: <></>,
     profileName: 'John Doe',
     profileDescription: 'john@example.com',
     profilePath: '/profile',
@@ -150,7 +150,11 @@ export const Three: Story = {
     toggleExpand: () => {},
     variant: 'three',
     menuType: 'a',
-    profileImage: (<div className='bg-slate-200 w-12 h-12 rounded-full flex items-center justify-center'>i</div>),
+    profileImage: (
+      <div className="bg-slate-200 w-12 h-12 rounded-full flex items-center justify-center">
+        i
+      </div>
+    ),
     profileName: 'John Doe',
     profileDescription: 'john@example.com',
     profilePath: '/profile',

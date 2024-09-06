@@ -37,7 +37,7 @@ export const DfxSidebar = ({
   profileDescription,
   profilePath,
   libraryType,
-  sidebarFooter
+  sidebarFooter,
 }: iDfxSidebar) => {
   if (variant === 'basic') {
     return (
@@ -100,6 +100,6 @@ export const DfxSidebar = ({
       />
     );
   }
-  
+
   return null;
 };

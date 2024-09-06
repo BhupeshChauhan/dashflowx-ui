@@ -18,12 +18,7 @@ export const StatsComp = ({
   itemClassName,
 }: iStatsComp) => {
   return (
-    <div
-      className={cn(
-        'flex items-center justify-center p-10',
-        className
-      )}
-    >
+    <div className={cn('flex items-center justify-center p-10', className)}>
       <div
         className={cn(
           'grid gap-3',

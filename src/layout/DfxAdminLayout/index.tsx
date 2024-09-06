@@ -43,7 +43,7 @@ export const DfxAdminLayout = ({
   profileDescription,
   profilePath,
   prefixNavBar,
-  sidebarFooter
+  sidebarFooter,
 }: iLayoutComp) => {
   if (variant === 'basic') {
     return (

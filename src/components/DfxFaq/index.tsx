@@ -30,7 +30,7 @@ export const DfxFaq = ({
   accordionContainerClassName,
   className,
   accordionvariant,
-  variant
+  variant,
 }: iDfxFaq) => {
   if (variant === 'basic') {
     return (

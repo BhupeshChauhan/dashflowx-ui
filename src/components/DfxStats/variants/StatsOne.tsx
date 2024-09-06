@@ -18,12 +18,7 @@ export const StatsOne = ({
   itemClassName,
 }: iStatsComp) => {
   return (
-    <div
-      className={cn(
-        'px-4 py-16 md:px-24 lg:px-8 lg:py-20',
-        className
-      )}
-    >
+    <div className={cn('px-4 py-16 md:px-24 lg:px-8 lg:py-20', className)}>
       <div
         className={cn(
           'grid gap-3 bg-white shadow-md',

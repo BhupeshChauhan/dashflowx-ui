@@ -23,7 +23,9 @@
     "build": "tsc && vite build",
     "prepack": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "commit": "yarn git-cz"
+    "commit": "yarn git-cz",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@dashflowx/core": "^2.0.32",
