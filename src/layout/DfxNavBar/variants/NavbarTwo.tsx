@@ -38,7 +38,7 @@ const NavbarTwo = ({
   openMenu,
 }: iDfxNavBarProps) => {
   return (
-    <nav className={cn(navClassName)} style={style}>
+    <nav className={cn('shadow-sm m-2',navClassName)} style={style}>
       <div className="w-full flex flex-wrap items-center justify-between mx-auto p-2">
         <div className="flex items-center justify-center">
           <div className="mr-6">{logo && logo}</div>
