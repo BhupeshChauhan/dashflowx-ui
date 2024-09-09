@@ -1,4 +1,5 @@
 import { SidebarComp } from './variants/Basic';
+import { SidebarFour } from './variants/SidebarFour';
 import { SidebarOne } from './variants/SidebarOne';
 import { SidebarThree } from './variants/SidebarThree';
 import { SidebarTwo } from './variants/SidebarTwo';
@@ -15,7 +16,7 @@ interface iDfxSidebar {
   menuArrays: iDfxMenu[];
   toggleExpand: () => void;
   logo: JSX.Element;
-  variant: 'basic' | 'one' | 'two' | 'three';
+  variant: 'basic' | 'one' | 'two' | 'three' | 'four';
   menuType: any;
   profileImage?: JSX.Element;
   profileName?: string;
@@ -97,6 +98,22 @@ export const DfxSidebar = ({
         profilePath={profilePath}
         libraryType={libraryType || 'react'}
         sidebarFooter={sidebarFooter}
+      />
+    );
+  }
+  if (variant === 'four') {
+    return (
+      <SidebarFour
+        logo={logo}
+        expanded={expanded}
+        menuArrays={menuArrays}
+        toggleExpand={toggleExpand}
+        menuType={menuType}
+        profileImage={profileImage}
+        profileName={profileName}
+        profileDescription={profileDescription}
+        profilePath={profilePath}
+        libraryType={libraryType || 'react'}
       />
     );
   }

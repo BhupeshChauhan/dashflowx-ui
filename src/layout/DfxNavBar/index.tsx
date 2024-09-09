@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import NavbarComp from './variants/Basic';
 import { NavbarOne } from './variants/NavbarOne';
+import NavbarTwo from './variants/NavbarTwo';
 
 interface iDfxMenu {
   id: string;
@@ -16,7 +17,7 @@ interface iDfxNavBarProps {
   menuIcon?: JSX.Element;
   navClassName?: string;
   navItemClassName?: string;
-  variant?: 'basic' | 'one';
+  variant?: 'basic' | 'one' | 'two';
   libraryType?: 'react' | 'next';
   style?: any;
   menuType?: any;
@@ -60,6 +61,24 @@ export const DfxNavBar: React.FC<iDfxNavBarProps> = ({
   if (variant === 'one') {
     return (
       <NavbarOne
+        menuArrays={menuArrays}
+        actions={actions}
+        logo={logo}
+        menuIcon={menuIcon}
+        navClassName={navClassName}
+        navItemClassName={navItemClassName}
+        libraryType={libraryType}
+        style={style}
+        menuType={menuType}
+        hideMenuIcon={hideMenuIcon}
+        handleMenutoggle={handleMenutoggle}
+        openMenu={openMenu}
+      />
+    );
+  }
+  if (variant === 'two') {
+    return (
+      <NavbarTwo
         menuArrays={menuArrays}
         actions={actions}
         logo={logo}
