@@ -70,7 +70,7 @@ export const LayoutFour = ({
         />
         <div
           className={cn(
-            'w-full p-2 overflow-y-scroll h-[calc(100vh-120px)]',
+            'm-2 overflow-y-scroll h-[calc(100vh-120px)]',
             scrollAreaClassName
           )}
         >

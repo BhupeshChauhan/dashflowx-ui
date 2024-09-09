@@ -134,6 +134,8 @@ export const DfxAdminLayout = ({
         profileName={profileName}
         profileDescription={profileDescription}
         profilePath={profilePath}
+        NavActions={NavActions}
+        prefixNavBar={prefixNavBar}
         sidebarFooter={sidebarFooter}
       >
         {children}

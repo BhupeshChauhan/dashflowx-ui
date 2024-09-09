@@ -42,8 +42,8 @@ export const SidebarFour = ({
       id="side-bar"
       className={cn(
         expanded
-          ? 'flex bg-black flex-col w-96 h-screen overflow-y-auto'
-          : 'bg-black relative flex flex-col items-start w-16 h-screen overflow-y-auto'
+          ? 'flex bg-black flex-col w-96 h-[calc(100vh-20px)] overflow-y-auto rounded-l-3xl'
+          : 'bg-black relative flex flex-col items-start w-16 h-[calc(100vh-20px)] overflow-y-auto rounded-l-3xl'
       )}
     >
       <div
