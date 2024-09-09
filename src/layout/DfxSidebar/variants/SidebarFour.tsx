@@ -121,13 +121,13 @@ export const SidebarFour = ({
           </div>
           <div
             className={cn(
-              'w-full mb-6 flex flex-col items-center justify-center px-2 py-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
+              'w-full mb-6 flex flex-col items-center justify-center px-2 py-2 text-slate-200 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
             )}
           >
             <button
               onClick={toggleExpand}
               className={cn(
-                'flex items-center justify-center w-full text-slate-200',
+                'flex items-center justify-center w-full',
                 expanded ? 'rotate-180 duration-75' : 'duration-75'
               )}
             >
