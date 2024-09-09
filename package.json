@@ -1,6 +1,6 @@
 {
   "name": "@dashflowx/ui",
-  "version": "1.0.4",
+  "version": "0.2.59",
   "type": "module",
   "files": [
     "dist"
@@ -12,10 +12,7 @@
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     },
-    "./styles.css": {
-      "import": "./dist/styles.css",
-      "require": "./dist/styles.css"
-    }
+    "./style.css": "./dist/assets/style.css"
   },
   "publishConfig": {
     "access": "public"
@@ -26,9 +23,12 @@
     "build": "tsc && vite build",
     "prepack": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "commit": "yarn git-cz"
+    "commit": "yarn git-cz",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@dashflowx/core": "^2.0.32",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -71,9 +71,11 @@
     "react-hook-form": "^7.52.0",
     "react-resizable-panels": "^2.0.19",
     "react-router-dom": "^6.22.3",
+    "rollup-plugin-postcss": "^4.0.2",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "upgrade": "^1.1.0",
     "vaul": "^0.9.1",
     "zod": "^3.23.8"
   },
@@ -85,6 +87,7 @@
     "@storybook/addon-onboarding": "^8.1.10",
     "@storybook/blocks": "^8.1.10",
     "@storybook/builder-vite": "^8.1.10",
+    "@storybook/cli": "^8.1.11",
     "@storybook/react": "^8.1.10",
     "@storybook/react-vite": "^8.1.10",
     "@storybook/test": "^8.1.10",
@@ -108,7 +111,7 @@
     "mrm": "^4.1.22",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
-    "storybook": "^8.1.10",
+    "storybook": "^8.1.11",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",

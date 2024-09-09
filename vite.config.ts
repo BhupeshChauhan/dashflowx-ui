@@ -7,21 +7,22 @@ import { defineConfig } from "vite";
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "./src/components/index.tsx"),
-      name: "dashflowx",
+      entry: path.resolve(__dirname, './src/index.tsx'),
+      name: 'dashflowx',
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react-dom'],
       output: {
+        assetFileNames: 'assets/[name].[ext]',
         globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
+          react: 'React',
+          'react-dom': 'ReactDOM',
         },
       },
     },
