@@ -91,7 +91,7 @@ export const Four: Story = {
     NavActions: <h1>Dashflow-x</h1>,
     libraryType: 'react',
     logo: <h1>Dash</h1>,
-    expanded: false,
+    expanded: true,
     menuArrays: itemsArray,
     toggleExpand: () => {},
     variant: 'four',

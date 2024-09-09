@@ -71,7 +71,7 @@ export const SidebarFour = ({
                 <h4
                   className={cn(
                     expanded
-                      ? 'mx-2 mt-2 text-lg font-bold text-gray-800 dark:text-gray-200'
+                      ? 'mx-2 mt-2 text-lg font-bold text-slate-50 dark:text-gray-200'
                       : 'hidden'
                   )}
                 >
@@ -82,7 +82,7 @@ export const SidebarFour = ({
                 <p
                   className={cn(
                     expanded
-                      ? 'mx-2 mt-1 text-xs font-medium text-gray-600 dark:text-gray-400'
+                      ? 'mx-2 mt-1 text-xs font-medium text-slate-200 dark:text-gray-400'
                       : 'hidden'
                   )}
                 >
@@ -97,7 +97,7 @@ export const SidebarFour = ({
               expanded ? 'h-[70%]' : 'h-[70%]'
             )}
           >
-            <div className={cn('w-full', expanded ? 'max-w-60' : 'max-w-14')}>
+            <div className={cn('w-full mx-auto', expanded ? 'max-w-60' : 'max-w-14')}>
               <MenuList
                 showText={expanded}
                 library={libraryType}
@@ -127,7 +127,7 @@ export const SidebarFour = ({
             <button
               onClick={toggleExpand}
               className={cn(
-                'flex items-center justify-center w-full',
+                'flex items-center justify-center w-full text-slate-200',
                 expanded ? 'rotate-180 duration-75' : 'duration-75'
               )}
             >
