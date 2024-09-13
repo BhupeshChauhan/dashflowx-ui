@@ -101,7 +101,7 @@ export const SidebarFour = ({
               <MenuList
                 showText={expanded}
                 library={libraryType}
-                variant="basic"
+                variant="two"
                 menuArrays={menuArrays}
                 type={menuType}
                 linkClassName="w-full"
