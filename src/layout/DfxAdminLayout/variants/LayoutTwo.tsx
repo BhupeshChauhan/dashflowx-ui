@@ -67,7 +67,7 @@ export const LayoutTwo = ({
         />
         <div
           className={cn(
-            'w-full p-6 bg-slate-100 overflow-y-scroll h-[calc(100vh-120px)]',
+            'w-full p-6 bg-slate-100 overflow-y-auto h-[calc(100vh-120px)]',
             scrollAreaClassName
           )}
         >

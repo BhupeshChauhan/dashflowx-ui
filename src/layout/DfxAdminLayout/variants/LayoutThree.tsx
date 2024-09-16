@@ -56,7 +56,7 @@ export const LayoutThree = ({
       <div className="max-h-screen w-full">
         <div
           className={cn(
-            'w-full px-6 py-12 pt-8 overflow-y-scroll h-[calc(100vh)]',
+            'w-full px-6 py-12 pt-8 overflow-y-auto h-[calc(100vh)]',
             scrollAreaClassName
           )}
         >
