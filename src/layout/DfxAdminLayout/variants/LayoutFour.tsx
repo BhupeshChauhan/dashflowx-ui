@@ -17,12 +17,8 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions?: JSX.Element;
   libraryType: 'react' | 'next';
-  profileImage?: JSX.Element;
-  profileName?: string;
-  profileDescription?: string;
   navClassName?: string;
   scrollAreaClassName?: string;
-  profilePath?: string;
   prefixNavBar?: JSX.Element;
   sidebarFooter?: JSX.Element;
   hideExpand?: boolean;
@@ -36,12 +32,8 @@ export const LayoutFour = ({
   children,
   NavActions,
   libraryType,
-  profileImage,
-  profileName,
-  profileDescription,
   navClassName,
   scrollAreaClassName,
-  profilePath,
   prefixNavBar,
   sidebarFooter,
   hideExpand
