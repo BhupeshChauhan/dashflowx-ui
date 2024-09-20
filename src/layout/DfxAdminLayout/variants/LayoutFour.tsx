@@ -25,6 +25,7 @@ interface iLayoutComp {
   profilePath?: string;
   prefixNavBar?: JSX.Element;
   sidebarFooter?: JSX.Element;
+  hideExpand?: boolean;
 }
 export const LayoutFour = ({
   logo,
@@ -42,7 +43,8 @@ export const LayoutFour = ({
   scrollAreaClassName,
   profilePath,
   prefixNavBar,
-  sidebarFooter
+  sidebarFooter,
+  hideExpand
 }: iLayoutComp) => {
   return (
     <div className="flex w-[calc(100vw-20px)] h-[calc(100vh-20px)] bg-white m-[10px] rounded-3xl">
@@ -53,11 +55,8 @@ export const LayoutFour = ({
         toggleExpand={toggleExpand}
         menuType={menuType}
         variant="five"
-        profileImage={profileImage}
-        profileName={profileName}
-        profileDescription={profileDescription}
+        hideExpand={hideExpand}
         libraryType={libraryType}
-        profilePath={profilePath}
         sidebarFooter={sidebarFooter}
       />
       <div className="max-h-screen w-full">

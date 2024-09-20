@@ -27,6 +27,7 @@ interface iLayoutComp {
   profilePath?: string;
   prefixNavBar?: JSX.Element;
   sidebarFooter?: JSX.Element;
+  hideExpand?: boolean;
 }
 
 export const DfxAdminLayout = ({
@@ -45,6 +46,7 @@ export const DfxAdminLayout = ({
   profilePath,
   prefixNavBar,
   sidebarFooter,
+  hideExpand
 }: iLayoutComp) => {
   if (variant === 'basic') {
     return (
@@ -137,6 +139,7 @@ export const DfxAdminLayout = ({
         NavActions={NavActions}
         prefixNavBar={prefixNavBar}
         sidebarFooter={sidebarFooter}
+        hideExpand={hideExpand}
       >
         {children}
       </LayoutFour>
