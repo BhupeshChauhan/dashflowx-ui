@@ -1,4 +1,5 @@
 import { SidebarComp } from './variants/Basic';
+import { SidebarFive } from './variants/SidebarFive';
 import { SidebarFour } from './variants/SidebarFour';
 import { SidebarOne } from './variants/SidebarOne';
 import { SidebarThree } from './variants/SidebarThree';
@@ -16,7 +17,7 @@ interface iDfxSidebar {
   menuArrays: iDfxMenu[];
   toggleExpand: () => void;
   logo: JSX.Element;
-  variant: 'basic' | 'one' | 'two' | 'three' | 'four';
+  variant: 'basic' | 'one' | 'two' | 'three' | 'four' | 'five';
   menuType: any;
   profileImage?: JSX.Element;
   profileName?: string;
@@ -24,6 +25,7 @@ interface iDfxSidebar {
   profilePath?: string;
   libraryType?: 'react' | 'next';
   sidebarFooter?: JSX.Element;
+  hideExpand?: boolean;
 }
 
 export const DfxSidebar = ({
@@ -39,6 +41,7 @@ export const DfxSidebar = ({
   profilePath,
   libraryType,
   sidebarFooter,
+  hideExpand
 }: iDfxSidebar) => {
   if (variant === 'basic') {
     return (
@@ -113,6 +116,19 @@ export const DfxSidebar = ({
         profileName={profileName}
         profileDescription={profileDescription}
         profilePath={profilePath}
+        libraryType={libraryType || 'react'}
+      />
+    );
+  }
+  if (variant === 'five') {
+    return (
+      <SidebarFive
+        logo={logo}
+        expanded={expanded}
+        menuArrays={menuArrays}
+        toggleExpand={toggleExpand}
+        menuType={menuType}
+        hideExpand={hideExpand}
         libraryType={libraryType || 'react'}
       />
     );
