@@ -455,3 +455,9 @@ export const variantSix: Story = {
     variant: 'six',
   },
 };
+
+export const variantSeven: Story = {
+  args: {
+    variant: "seven"
+  },
+};

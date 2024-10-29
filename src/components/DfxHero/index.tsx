@@ -5,13 +5,14 @@ import { HeroFour } from './variants/HeroFour';
 import { HeroFive } from './variants/HeroFive';
 import { HeroSix } from './variants/HeroSix';
 import { HeroComp } from './variants/Basic';
+import HeroSeven from './variants/HeroSeven';
 
 interface iDHeroOneProps {
   heroImage?: JSX.Element;
   actions?: JSX.Element;
   heading: JSX.Element;
   caption: JSX.Element;
-  variant: 'one' | 'two' | 'three' | 'four' | 'five' | 'six' | 'basic';
+  variant: 'one' | 'two' | 'three' | 'four' | 'five' | 'six' | 'basic' | "seven";
   subElement?: JSX.Element;
   textSecClassName?: string;
   className?: string;
@@ -107,6 +108,11 @@ export const DfxHero = ({
         subElement={subElement}
         textSecClassName={textSecClassName}
       />
+    );
+  }
+  if (variant === 'seven') {
+    return (
+      <HeroSeven />
     );
   }
 };

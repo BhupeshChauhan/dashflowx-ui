@@ -1,4 +1,5 @@
 import { LayoutComp } from './variants/Basic';
+import { LayoutFive } from './variants/LayoutFive';
 import { LayoutFour } from './variants/LayoutFour';
 import { LayoutOne } from './variants/LayoutOne';
 import { LayoutThree } from './variants/LayoutThree';
@@ -20,7 +21,7 @@ interface iLayoutComp {
   children: JSX.Element;
   NavActions?: JSX.Element;
   libraryType: 'react' | 'next';
-  variant: 'basic' | 'one' | 'two' | 'three' | 'four';
+  variant: 'basic' | 'one' | 'two' | 'three' | 'four' | "five";
   profileImage?: JSX.Element;
   profileName?: string;
   profileDescription?: string;
@@ -139,6 +140,22 @@ export const DfxAdminLayout = ({
       >
         {children}
       </LayoutFour>
+    );
+  }
+  if (variant === 'five') {
+    return (
+      <LayoutFive
+        logo={logo}
+        expanded={expanded}
+        menuArrays={menuArrays}
+        toggleExpand={toggleExpand}
+        menuType={menuType}
+        libraryType={libraryType}
+        sidebarFooter={sidebarFooter}
+        hideExpand={hideExpand}
+      >
+        {children}
+      </LayoutFive>
     );
   }
   return null;
