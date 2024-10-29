@@ -78,7 +78,7 @@ export const SidebarFive = ({
         <div>
           {sidebarFooter && <div
             className={cn(
-              'w-full flex flex-col items-center justify-center px-2 py-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700'
+              'w-full flex flex-col items-center justify-center px-2 py-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-400'
             )}
           >
             {sidebarFooter}
