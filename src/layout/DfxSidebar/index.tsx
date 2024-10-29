@@ -130,6 +130,7 @@ export const DfxSidebar = ({
         menuType={menuType}
         hideExpand={hideExpand}
         libraryType={libraryType || 'react'}
+        sidebarFooter={sidebarFooter}
       />
     );
   }

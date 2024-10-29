@@ -103,3 +103,21 @@ export const Four: Story = {
     profilePath: '/profile',
   },
 };
+
+export const Five: Story = {
+  args: {
+    NavActions: <h1>Dashflow-x</h1>,
+    libraryType: 'react',
+    logo: <h1>Dash</h1>,
+    expanded: false,
+    menuArrays: itemsArray,
+    toggleExpand: () => {},
+    variant: 'five',
+    menuType: 'a',
+    children: <div className="h-full w-full bg-white"></div>,
+    profileImage: <></>,
+    profileName: 'John Doe',
+    profileDescription: 'john@example.com',
+    profilePath: '/profile',
+  },
+};
