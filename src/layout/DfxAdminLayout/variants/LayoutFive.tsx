@@ -46,7 +46,7 @@ export const LayoutFive = ({
       />
         <div
           className={cn(
-            'overflow-y-auto max-h-screen w-full',
+            'overflow-y-auto max-h-[calc(100vh-20px)] w-full',
             scrollAreaClassName
           )}
         >
