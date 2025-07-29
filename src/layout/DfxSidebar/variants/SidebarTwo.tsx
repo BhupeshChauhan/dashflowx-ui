@@ -92,7 +92,6 @@ export const SidebarTwo = ({
             variant="basic"
             menuArrays={menuArrays}
             type={menuType}
-            linkClassName="w-full"
             className="w-full"
             tooltipClassName="bg-white"
           />
