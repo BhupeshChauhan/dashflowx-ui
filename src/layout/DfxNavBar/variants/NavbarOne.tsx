@@ -91,12 +91,12 @@ export const NavbarOne = ({
             )}
           </div>
           <div
-            className={`absolute md:hidden left-0 w-full bg-white flex flex-col font-semibold transform transition-transform ${
-              openMenu ? "opacity-100 visible" : "opacity-0 invisible"
+            className={`absolute md:hidden left-0 w-full bg-gray-50 mt-5 flex flex-col font-semibold transform transition-transform ${
+              openMenu ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}
             style={{
-              top: "50px",
-              transition: "transform 0.3s ease-in-out,opacity 0.3s ease-in-out",
+              top: '50px',
+              transition: 'transform 0.3s ease-in-out,opacity 0.3s ease-in-out',
             }}
             id="navbar-default"
           >
@@ -107,6 +107,7 @@ export const NavbarOne = ({
                 variant="one"
                 menuArrays={menuArrays}
                 library={libraryType}
+                navClassName="flex-col"
               />
             )}
           </div>
