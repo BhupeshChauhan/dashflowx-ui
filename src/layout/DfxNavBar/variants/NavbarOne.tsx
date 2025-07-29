@@ -77,10 +77,27 @@ export const NavbarOne = ({
             </Button>
           ) : null}
           <div
-            className={cn(
-              openMenu ? '' : 'hidden ',
-              'w-full md:block md:w-auto'
+            className="hidden md:flex items-center gap-12 font-semibold text-base"
+            id="navbar-default"
+          >
+            {menuArrays && (
+              <MenuList
+                type={menuType}
+                className={navItemClassName}
+                variant="one"
+                menuArrays={menuArrays}
+                library={libraryType}
+              />
             )}
+          </div>
+          <div
+            className={`absolute md:hidden left-0 w-full bg-white flex flex-col font-semibold transform transition-transform ${
+              openMenu ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+            style={{
+              top: "50px",
+              transition: "transform 0.3s ease-in-out,opacity 0.3s ease-in-out",
+            }}
             id="navbar-default"
           >
             {menuArrays && (
